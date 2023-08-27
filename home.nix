@@ -118,6 +118,7 @@
       add_newline = false;
 
       format = builtins.concatStringsSep "" [
+        "$line_break"
         "$all"
       ];
 
