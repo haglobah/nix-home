@@ -72,41 +72,44 @@
     # EDITOR = "emacs";
   };
 
-  home.shellAliases = {
-    ".." = "cd ..";
-    "cp" = "cp -i";
-    "h" = "history";
-    "ls" = "ls -p --color";
-    "ll" = "ls -lv";
-    "la" = "ll -A";
-    "lr" = "ll -R";
-    "mv" = "mv -i";
-    "rm" = "rm -i";
-    "which" = "type -a";
-
-    "grep" = "grep --color=auto";
-
-    "ga" = "git add";
-    "gu" = "git restore --staged";
-    "gs" = "git status -s -b";
-    "gst" = "git status";
-    "gb" = "git branch -a -v";
-    "gl" = "git log --oneline --decorate --graph";
-    "gcm" = "git commit -m";
-    "gp" = "git push";
-    "gf" = "git pull";
-    "gF" = "git fetch";
-    "gcb" = "git checkout -b";
-    "gsw" = "git switch";
-    "gco" = "git checkout";
-    "gra" = "git remote add";
-    "grv" = "git remote --verbose";
-    "gca" = "git commit --amend";
-    "gcan" = "git commit --amend --no-edit";
-  };
-
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  programs.bash = {
+    enable = true;
+    shellAliases = {
+      ".." = "cd ..";
+      "cp" = "cp -i";
+      "h" = "history";
+      "ls" = "ls -p --color";
+      "ll" = "ls -lv";
+      "la" = "ll -A";
+      "lr" = "ll -R";
+      "mv" = "mv -i";
+      "rm" = "rm -i";
+      "which" = "type -a";
+
+      "grep" = "grep --color=auto";
+
+      "ga" = "git add";
+      "gu" = "git restore --staged";
+      "gs" = "git status -s -b";
+      "gst" = "git status";
+      "gb" = "git branch -a -v";
+      "gl" = "git log --oneline --decorate --graph";
+      "gcm" = "git commit -m";
+      "gp" = "git push";
+      "gf" = "git pull";
+      "gF" = "git fetch";
+      "gcb" = "git checkout -b";
+      "gsw" = "git switch";
+      "gco" = "git checkout";
+      "gra" = "git remote add";
+      "grv" = "git remote --verbose";
+      "gca" = "git commit --amend";
+      "gcan" = "git commit --amend --no-edit";
+    };
+  };
 
   programs.git = {
     userEmail = "bah@posteo.de";
