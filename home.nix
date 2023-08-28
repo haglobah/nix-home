@@ -76,16 +76,18 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  programs.git = {
+    userEmail = "bah@posteo.de";
+    userName = "Beat Hagenlocher";
+  };
+
   programs.bash = {
     enable = true;
     shellAliases = {
       ".." = "cd ..";
       "cp" = "cp -i";
       "h" = "history";
-      "ls" = "ls -p --color";
-      "ll" = "ls -lv";
-      "la" = "ll -A";
-      "lr" = "ll -R";
+      "l" = "lla";
       "mv" = "mv -i";
       "rm" = "rm -i";
       "which" = "type -a";
@@ -132,8 +134,15 @@
     };
   };
 
-  programs.git = {
-    userEmail = "bah@posteo.de";
-    userName = "Beat Hagenlocher";
+  programs.exa = {
+    enable = true;
+    enableAliases = true;
+    git = true;
+  };
+  programs.zoxide = {
+    enable = true;
+  };
+  programs.fzf = {
+    enable = true;
   };
 }
