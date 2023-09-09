@@ -77,6 +77,7 @@
   programs.home-manager.enable = true;
 
   programs.git = {
+    enable = true;
     userEmail = "bah@posteo.de";
     userName = "Beat Hagenlocher";
   };
