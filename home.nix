@@ -28,6 +28,8 @@
     # pkgs.hello
     obsidian
     discord
+    signal-desktop
+    telegram-desktop
     tmux
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
