@@ -121,6 +121,8 @@
     enable = true;
     userSettings = {
       "workbench.colorTheme" = "Palenight (Mild Contrast)";
+      "editor.fontFamily" = "'FiraCode Nerd Font', 'DroidSansMono', monospace";
+      "editor.fontLigatures" = true;
       "editor.minimap.enabled" = false;
       "editor.scrollbar.verticalScrollbarSize" = 3;
       "editor.scrollbar.horizontalScrollbarSize" = 3;
