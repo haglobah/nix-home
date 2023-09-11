@@ -121,6 +121,9 @@
     enable = true;
     userSettings = {
       "workbench.colorTheme" = "Palenight (Mild Contrast)";
+      "editor.minimap.enabled" = false;
+      "editor.scrollbar.verticalScrollbarSize" = 3;
+      "editor.scrollbar.horizontalScrollbarSize" = 3;
       "editor.bracketPairColorization.enabled" = true;
       "workbench.colorCustomizations" = {
         "editorBracketHighlight.foreground1" = "#5caeef";
