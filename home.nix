@@ -117,6 +117,55 @@
     };
   };
 
+  programs.vscode = {
+    enable = true;
+    userSettings = {
+      "workbench.colorTheme" = "Palenight (Mild Contrast)";
+      "editor.bracketPairColorization.enabled" = true;
+      "workbench.colorCustomizations" = {
+        "editorBracketHighlight.foreground1" = "#5caeef";
+        "editorBracketHighlight.foreground2" = "#dfb976";
+        "editorBracketHighlight.foreground3" = "#c172d9";
+        "editorBracketHighlight.foreground4" = "#4fb1bc";
+        "editorBracketHighlight.foreground5" = "#97c26c";
+        "editorBracketHighlight.foreground6" = "#abb2c0";
+        "editorBracketHighlight.unexpectedBracket.foreground" = "#db6165";
+      };
+    };
+    keybindings = [
+      {
+          "key" = "shift+alt+down";
+          "command" = "editor.action.copyLinesDownAction";
+          "when" = "editorTextFocus && !editorReadonly";
+      }
+      {
+          "key" = "ctrl+shift+alt+down";
+          "command" = "-editor.action.copyLinesDownAction";
+          "when" = "editorTextFocus && !editorReadonly";
+      }
+      {
+          "key" = "shift+alt+up";
+          "command" = "editor.action.copyLinesUpAction";
+          "when" = "editorTextFocus && !editorReadonly";
+      }
+      {
+          "key" = "ctrl+shift+alt+up";
+          "command" = "-editor.action.copyLinesUpAction";
+          "when" = "editorTextFocus && !editorReadonly";
+      }
+      {
+          "key" = "shift+alt+up";
+          "command" = "-editor.action.insertCursorAbove";
+          "when" = "editorTextFocus";
+      }
+      {
+          "key" = "shift+alt+down";
+          "command" = "-editor.action.insertCursorBelow";
+          "when" = "editorTextFocus";
+      }
+    ];
+  };
+
   programs.starship = {
     enable = true;
     # Configuration written to ~/.config/starship.toml
