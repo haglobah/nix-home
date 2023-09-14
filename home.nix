@@ -82,6 +82,13 @@
     enable = true;
     userEmail = "bah@posteo.de";
     userName = "Beat Hagenlocher";
+    includes = [
+      { 
+        contents = {
+          init.defaultBranch = "main";
+        };
+      }
+    ];
   };
 
   programs.bash = {
