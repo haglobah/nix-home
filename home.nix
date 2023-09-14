@@ -136,6 +136,7 @@
         "editorBracketHighlight.foreground6" = "#abb2c0";
         "editorBracketHighlight.unexpectedBracket.foreground" = "#db6165";
       };
+      "files.autoSave" = "onFocusChange";
     };
     keybindings = [
       {
