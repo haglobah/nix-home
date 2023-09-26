@@ -121,6 +121,9 @@
       "grv" = "git remote --verbose";
       "gca" = "git commit --amend";
       "gcan" = "git commit --amend --no-edit";
+
+      "nix-list" = "nix profile history --profile /nix/var/nix/profiles/system";
+      "nix-rm-boot-entries" = "nix profile wipe-history --profile /nix/var/nix/profiles/system --older-than 30d";
     };
   };
 
