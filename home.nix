@@ -31,6 +31,7 @@
     signal-desktop
     telegram-desktop
     slack
+    zoom-us
     tmux
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
