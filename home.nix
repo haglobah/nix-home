@@ -139,6 +139,15 @@
 
       "d" = "devenv";
     };
+    initExtra = ''
+      md () {
+        mkdir -p -- "$1" && cd -P -- "$1"
+      } 
+
+      freq () {
+        history | cut -c8- | cut -d" " --fields=1"$1" | sort | uniq -c | sort -rn
+      }
+    '';
   };
 
   programs.direnv = {
