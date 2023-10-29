@@ -123,9 +123,21 @@
       "grv" = "git remote --verbose";
       "gca" = "git commit --amend";
       "gcan" = "git commit --amend --no-edit";
+      "gcl" = "git clone";
+      "gd" = "git diff";
+      "gsh" = "git stash";
 
       "nix-list" = "nix profile history --profile /nix/var/nix/profiles/system";
       "nix-rm-boot-entries" = "nix profile wipe-history --profile /nix/var/nix/profiles/system --older-than 30d";
+      "nre" = "sudo nixos-rebuild switch --flake .";
+      "nup" = "nix flake update";
+      "nupgrade" = "nix flake update && sudo nixos-rebuild switch --flake .";
+      "nsh" = "nix shell";
+      
+      "hm" = "home-manager";
+      "hsw" = "home-manager switch --flake .";
+
+      "d" = "devenv";
     };
   };
 
