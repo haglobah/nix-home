@@ -113,6 +113,7 @@
       "gb" = "git branch -a -v";
       "gl" = "git log --oneline --decorate --graph";
       "gcm" = "git commit -m";
+      "gam" = "git add . && git commit -m";
       "gp" = "git push";
       "gf" = "git pull";
       "gF" = "git fetch";
