@@ -26,6 +26,11 @@
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
+    wget
+    curl
+    bat
+    firefox
+    chromium
     obsidian
     discord
     signal-desktop
