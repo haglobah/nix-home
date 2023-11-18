@@ -154,6 +154,8 @@
       freq () {
         history | cut -c8- | cut -d" " --fields=1"$1" | sort | uniq -c | sort -rn
       }
+
+      export PATH="$PATH:~/.config/emacs/bin"
     '';
   };
 
