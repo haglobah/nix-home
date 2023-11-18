@@ -20,6 +20,12 @@
     allowUnfreePredicate = (_: true);
   };
 
+  nixpkgs.overlays = [
+    (import (builtins.fetchTarball {
+      url = https://github.com/nix-community/emacs-overlay/archive/master.tar.gz;
+      sha256 = "0ymcafrhfzsvnbwznm471ry5b8fj1760f29i1p2hgxz7a91kzm3q";}))
+  ];
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
@@ -38,6 +44,7 @@
     slack
     zoom-us
     tmux
+    emacs-git
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
