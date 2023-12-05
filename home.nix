@@ -23,7 +23,7 @@
   nixpkgs.overlays = [
     (import (builtins.fetchTarball {
       url = https://github.com/nix-community/emacs-overlay/archive/master.tar.gz;
-      sha256 = "0ymcafrhfzsvnbwznm471ry5b8fj1760f29i1p2hgxz7a91kzm3q";}))
+      sha256 = "1p64aiq1x2r68x3hqqibd6nvinallakb4b0ych7v21jg0lxifbwl";}))
   ];
 
   # The home.packages option allows you to install Nix packages into your
@@ -44,7 +44,11 @@
     slack
     zoom-us
     tmux
-    emacs-git
+    cachix
+    gnome.gnome-terminal
+    gnome.gnome-tweaks
+    gnomeExtensions.pop-shell
+    emacs-unstable
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -59,6 +63,16 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
   ];
+
+  dconf.settings = {
+    "org/gnome/shell" = {
+      disable-user-extensions = false;
+      
+      enabled-extensions = [
+        # "pop-shell@system76.com"
+      ];
+    };
+  };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
