@@ -220,6 +220,16 @@
           "command" = "-editor.action.insertCursorBelow";
           "when" = "editorTextFocus";
       }
+      {
+        "key" = "ctrl+shift+t";
+        "command" = "workbench.action.terminal.split";
+        "when" = "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile";
+      }
+      {
+        "key" = "ctrl+shift+5";
+        "command" = "-workbench.action.terminal.split";
+        "when" = "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile";
+      }
     ];
   };
 
