@@ -185,6 +185,8 @@
       }
 
       export PATH="$PATH:~/.config/emacs/bin"
+      export PATH="$PATH:~/.emacs.d/bin"
+      export EDITOR="emacs"
     '';
   };
 
