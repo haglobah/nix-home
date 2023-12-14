@@ -219,6 +219,7 @@
         "editorBracketHighlight.unexpectedBracket.foreground" = "#db6165";
       };
       "files.autoSave" = "onFocusChange";
+      "editor.tabSize" = 2;
     };
     keybindings = [
       {
