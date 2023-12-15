@@ -23,7 +23,7 @@
   nixpkgs.overlays = [
     (import (builtins.fetchTarball {
       url = https://github.com/nix-community/emacs-overlay/archive/master.tar.gz;
-      sha256 = "1p64aiq1x2r68x3hqqibd6nvinallakb4b0ych7v21jg0lxifbwl";}))
+      sha256 = "0nr8bpglvhjjkyh6xf091gb8nwqn66spycmhhzvkh5smahxpjw0n";}))
   ];
 
   # The home.packages option allows you to install Nix packages into your
@@ -157,9 +157,13 @@
       "nix-list" = "nix profile history --profile /nix/var/nix/profiles/system";
       "nix-rm-boot-entries" = "nix profile wipe-history --profile /nix/var/nix/profiles/system --older-than 30d";
       "nre" = "sudo nixos-rebuild switch --flake .";
-      "nup" = "nix flake update";
       "nupgrade" = "nix flake update && sudo nixos-rebuild switch --flake .";
       "nsh" = "nix shell";
+
+      "nf" = "nix flake";
+      "nup" = "nix flake update";
+      "nb" = "nix build";
+      "nd" = "nix develop";
       
       "hm" = "home-manager";
       "hsw" = "home-manager switch --flake .";
@@ -176,7 +180,13 @@
         history | cut -c8- | cut -d" " --fields=1"$1" | sort | uniq -c | sort -rn
       }
 
+      gap () {
+        git add . && git commit --message="$1" && git push 
+      }
+
       export PATH="$PATH:~/.config/emacs/bin"
+      export PATH="$PATH:~/.emacs.d/bin"
+      export EDITOR="emacs"
     '';
   };
 
@@ -211,6 +221,7 @@
         "editorBracketHighlight.unexpectedBracket.foreground" = "#db6165";
       };
       "files.autoSave" = "onFocusChange";
+      "editor.tabSize" = 2;
     };
     keybindings = [
       {
@@ -242,6 +253,16 @@
           "key" = "shift+alt+down";
           "command" = "-editor.action.insertCursorBelow";
           "when" = "editorTextFocus";
+      }
+      {
+        "key" = "ctrl+shift+t";
+        "command" = "workbench.action.terminal.split";
+        "when" = "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile";
+      }
+      {
+        "key" = "ctrl+shift+5";
+        "command" = "-workbench.action.terminal.split";
+        "when" = "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile";
       }
     ];
   };
