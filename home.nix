@@ -45,9 +45,13 @@
     zoom-us
     tmux
     cachix
+    
     gnome.gnome-terminal
     gnome.gnome-tweaks
     gnomeExtensions.pop-shell
+
+    ripgrep
+    fd
     emacs-unstable
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
