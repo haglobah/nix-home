@@ -14,9 +14,14 @@
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    alles = {
+      url = "github:haglobah/alles";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, nix-index-database, ... }:
+  outputs = { nixpkgs, home-manager, nix-index-database, alles, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -29,6 +34,9 @@
         modules = [ 
           ./home.nix
           nix-index-database.hmModules.nix-index
+          {
+            home.packages = [ alles.packages.${system}.default ];
+          }
         ];
 
         # Optionally use extraSpecialArgs
