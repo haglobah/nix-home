@@ -49,6 +49,7 @@
     tmux
     cachix
     ydotool
+    wl-clipboard
     
     gnome.gnome-terminal
     gnome.gnome-tweaks
