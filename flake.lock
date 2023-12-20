@@ -9,11 +9,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1703095094,
-        "narHash": "sha256-VGqZXLMyVTNI3XNNbjXglQpUm1Cu4wHX4qs0hI4Hp/8=",
+        "lastModified": 1703095224,
+        "narHash": "sha256-mI21Kp/zcvWcw2S0lw+6xIkLTjYboXFe7TC9yJnope8=",
         "owner": "haglobah",
         "repo": "alles",
-        "rev": "58b077235b60b0877b701c9c3c52012ed49338a2",
+        "rev": "10514cb1108477092defc988ec66400cc1c6c385",
         "type": "github"
       },
       "original": {
