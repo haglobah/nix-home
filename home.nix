@@ -231,6 +231,7 @@
       };
       "files.autoSave" = "onFocusChange";
       "editor.tabSize" = 2;
+      "direnv.restart.automatic" = true;
     };
     keybindings = [
       {
