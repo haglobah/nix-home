@@ -233,6 +233,7 @@
       "editor.tabSize" = 2;
       "direnv.restart.automatic" = true;
       "terminal.integrated.enableMultiLinePasteWarning" = false;
+      "explorer.confirmDelete" = false;
     };
     keybindings = [
       {
