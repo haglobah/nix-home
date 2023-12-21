@@ -26,7 +26,7 @@
   nixpkgs.overlays = [
     (import (builtins.fetchTarball {
       url = https://github.com/nix-community/emacs-overlay/archive/master.tar.gz;
-      sha256 = "0nr8bpglvhjjkyh6xf091gb8nwqn66spycmhhzvkh5smahxpjw0n";}))
+      sha256 = "1p64aiq1x2r68x3hqqibd6nvinallakb4b0ych7v21jg0lxifbwl";}))
   ];
 
   # The home.packages option allows you to install Nix packages into your
