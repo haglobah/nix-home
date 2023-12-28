@@ -170,6 +170,9 @@
       "nsh" = "nix shell";
 
       "nf" = "nix flake";
+      "nfc" = "nix flake check";
+      "nft" = "nix flake init --template ";
+      "ns" = "nix flake show";
       "nup" = "nix flake update";
       "nb" = "nix build";
       "nd" = "nix develop";
