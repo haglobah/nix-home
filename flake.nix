@@ -19,9 +19,13 @@
       url = "github:haglobah/alles";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, nix-index-database, alles, ... }:
+  outputs = { nixpkgs, home-manager, nix-index-database, alles, agenix, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -35,7 +39,10 @@
           ./home.nix
           nix-index-database.hmModules.nix-index
           {
-            home.packages = [ alles.packages.${system}.default ];
+            home.packages = [
+              alles.packages.${system}.default
+              agenix.packages.${system}.default
+            ];
           }
         ];
 
