@@ -176,6 +176,8 @@
       "nup" = "nix flake update";
       "nb" = "nix build";
       "nd" = "nix develop";
+
+      "da" = "direnv allow";
       
       "hm" = "home-manager";
       "hsw" = "home-manager switch --flake .";
