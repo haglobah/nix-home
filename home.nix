@@ -26,7 +26,7 @@
   nixpkgs.overlays = [
     (import (builtins.fetchTarball {
       url = https://github.com/nix-community/emacs-overlay/archive/master.tar.gz;
-      sha256 = "0nr8bpglvhjjkyh6xf091gb8nwqn66spycmhhzvkh5smahxpjw0n";}))
+      sha256 = "1pma7g89sjpmm2836wsqn5npx99agm56jv6c2l9rk1k63343f1rc";}))
   ];
 
   # The home.packages option allows you to install Nix packages into your
@@ -119,13 +119,10 @@
     enable = true;
     userEmail = "bah@posteo.de";
     userName = "Beat Hagenlocher";
-    includes = [
-      { 
-        contents = {
-          init.defaultBranch = "main";
-        };
-      }
-    ];
+    extraConfig = {
+      core.sshCommand = "ssh -i ~/.ssh/id_rsa -F /dev/null";
+      init.defaultBranch = "main";
+    };
   };
 
   programs.bash = {
