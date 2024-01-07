@@ -163,14 +163,14 @@
       "nix-list" = "nix profile history --profile /nix/var/nix/profiles/system";
       "nix-rm-boot-entries" = "nix profile wipe-history --profile /nix/var/nix/profiles/system --older-than 30d";
       "nre" = "sudo nixos-rebuild switch --flake .";
-      "nupgrade" = "nix flake update && sudo nixos-rebuild switch --flake .";
+      "nure" = "nix flake update && sudo nixos-rebuild switch --flake .";
       "nsh" = "nix shell";
 
       "nf" = "nix flake";
       "nfc" = "nix flake check";
       "nft" = "nix flake init --template ";
-      "ns" = "nix flake show";
-      "nup" = "nix flake update";
+      "nfs" = "nix flake show";
+      "nfu" = "nix flake update";
       "nb" = "nix build";
       "nd" = "nix develop";
 
@@ -178,6 +178,7 @@
       
       "hm" = "home-manager";
       "hsw" = "home-manager switch --flake .";
+      "reload" = ". ~/.bash_profile";
 
       "d" = "devenv";
     };
