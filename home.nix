@@ -175,12 +175,14 @@
       "nd" = "nix develop";
 
       "da" = "direnv allow";
+      "dr" = "direnv reload";
+
+      "e" = "emacs";
+      "c" = "code . &";
       
       "hm" = "home-manager";
       "hsw" = "home-manager switch --flake .";
       "reload" = ". ~/.bash_profile";
-
-      "d" = "devenv";
     };
 
     initExtra = ''
@@ -194,6 +196,9 @@
 
       gap () {
         git add . && git commit --message="$1" && git push 
+      }
+      gm () {
+        git add "''${@:2}" && git commit --message="$1"
       }
 
       export PATH="$PATH:~/.config/emacs/bin"
