@@ -138,6 +138,7 @@
 
       "grep" = "grep --color=auto";
 
+      "gi" = "git init";
       "ga" = "git add";
       "gu" = "git restore --staged";
       "gs" = "git status -s -b";
