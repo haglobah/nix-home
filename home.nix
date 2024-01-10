@@ -225,6 +225,7 @@
       "editor.fontFamily" = "'FiraCode Nerd Font', 'DroidSansMono', monospace";
       "editor.fontLigatures" = true;
       "editor.minimap.enabled" = false;
+      "editor.glyphMargin" = false;
       "editor.scrollbar.verticalScrollbarSize" = 3;
       "editor.scrollbar.horizontalScrollbarSize" = 3;
       "editor.bracketPairColorization.enabled" = true;
