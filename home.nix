@@ -79,6 +79,7 @@
       
       enabled-extensions = [
         # "pop-shell@system76.com"
+        "gnome-magic-window@adrienverge"
       ];
     };
   };
@@ -90,6 +91,9 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
+
+    ".local/share/gnome-shell/extensions/gnome-magic-window@adrienverge/extension.js".source = dotfiles/gnome-magic-window/extension.js;
+    ".local/share/gnome-shell/extensions/gnome-magic-window@adrienverge/metadata.json".source = dotfiles/gnome-magic-window/metadata.json;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
