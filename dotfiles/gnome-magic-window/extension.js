@@ -30,9 +30,14 @@ const BINDINGS = [
     command: 'firefox'
   },
   {
-    shortcut: '<Super>v',
+    shortcut: '<Super>c',
     title: 'Code',
     command: 'code'
+  },
+  {
+    shortcut: '<Super>o',
+    title: 'Obsidian',
+    command: 'obsidian'
   },
   // More bindings can be added, for example:
   // {
