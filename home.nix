@@ -154,6 +154,7 @@
       "gp" = "git push";
       "gf" = "git pull";
       "gF" = "git fetch";
+      "gun" = "git rm --cached";
       "gcb" = "git checkout -b";
       "gsw" = "git switch";
       "gco" = "git checkout";
