@@ -32,11 +32,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1705438443,
-        "narHash": "sha256-QfondE+6j/ATWyKgL9d6kUHZMNUjIh8UyS18va97jvU=",
+        "lastModified": 1705493995,
+        "narHash": "sha256-yg6W+TUHxC55/+wWQbDwLhiYC88BPNuWuTQ8yk7qm20=",
         "owner": "haglobah",
         "repo": "alles",
-        "rev": "8021706a47f689a8fa5d63eebbeb828766d467f4",
+        "rev": "b79f17439cccb2adb5fd20af2d54b35145b31dd1",
         "type": "github"
       },
       "original": {
