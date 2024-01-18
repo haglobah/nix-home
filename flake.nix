@@ -26,22 +26,22 @@
     emacs-overlay = {
       url = "github:nix-community/emacs-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
-    }
+    };
   };
 
-  outputs = { nixpkgs, home-manager, nix-index-database, alles, agenix, ... }:
+  outputs = { nixpkgs, home-manager, nix-index-database, alles, agenix, emacs-overlay, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-      overlays = inputs.emacs-overlay;
+      overlays = [ emacs-overlay ];
     in {
       homeConfigurations."beat" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+        inherit pkgs config;
 
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
         modules = [ 
-          (import ./home.nix {inherit nixpkgs config overlays};)
+          (import ./home.nix { inherit pkgs config overlays; })
           nix-index-database.hmModules.nix-index
           {
             home.packages = [
