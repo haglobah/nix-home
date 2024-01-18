@@ -48,6 +48,10 @@
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
+        # extraSpecialArgs = {
+        #   stuff = "stuff";
+        # };
+        # And I can get them back in home.nix via config.stuff. Nice!
       };
     };
 }
