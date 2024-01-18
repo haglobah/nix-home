@@ -35,6 +35,11 @@ const BINDINGS = [
     command: 'code'
   },
   {
+    shortcut: '<Super>e',
+    title: 'Emacs',
+    command: 'emacs'
+  },
+  {
     shortcut: '<Super>o',
     title: 'Obsidian',
     command: 'obsidian'
