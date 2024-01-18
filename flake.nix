@@ -23,12 +23,17 @@
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    emacs-overlay = {
+      url = "github:nix-community/emacs-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    }
   };
 
   outputs = { nixpkgs, home-manager, nix-index-database, alles, agenix, ... }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      overlays = inputs.emacs-overlay;
     in {
       homeConfigurations."beat" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
@@ -36,7 +41,7 @@
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
         modules = [ 
-          ./home.nix
+          (import ./home.nix {inherit nixpkgs config overlays};)
           nix-index-database.hmModules.nix-index
           {
             home.packages = [
