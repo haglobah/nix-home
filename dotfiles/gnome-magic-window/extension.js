@@ -44,6 +44,11 @@ const BINDINGS = [
     title: 'Obsidian',
     command: 'obsidian'
   },
+  {
+    shortcut: '<Super>s',
+    title: 'Signal',
+    command: 'signal-desktop'
+  },
   // More bindings can be added, for example:
   // {
   //   shortcut: 'F11',
