@@ -234,6 +234,8 @@
       "editor.minimap.enabled" = false;
       "editor.glyphMargin" = false;
       "editor.folding" = false;
+      "editor.wordWrap" = "bounded";
+      "editor.wordWrapColumn" = 160;
       "editor.scrollbar.verticalScrollbarSize" = 3;
       "editor.scrollbar.horizontalScrollbarSize" = 3;
       "editor.bracketPairColorization.enabled" = true;
