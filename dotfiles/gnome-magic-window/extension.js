@@ -49,6 +49,11 @@ const BINDINGS = [
     title: 'Signal',
     command: 'signal-desktop'
   },
+  {
+    shortcut: '<Super>d',
+    title: 'Discord',
+    command: 'discord'
+  },
   // More bindings can be added, for example:
   // {
   //   shortcut: 'F11',
