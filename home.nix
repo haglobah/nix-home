@@ -253,7 +253,7 @@
       "direnv.restart.automatic" = true;
       "terminal.integrated.enableMultiLinePasteWarning" = false;
       "explorer.confirmDelete" = false;
-      "windows.zoomLevel" = -1;
+      "window.zoomLevel" = -1;
     };
     keybindings = [
       {
