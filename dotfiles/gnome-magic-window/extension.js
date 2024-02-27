@@ -54,6 +54,16 @@ const BINDINGS = [
     title: 'Discord',
     command: 'discord'
   },
+  {
+    shortcut: '<Super>g',
+    title: 'Chromium',
+    command: 'chromium'
+  },
+  {
+    shortcut: '<Super>n',
+    title: 'Files (Nautilus)',
+    command: 'nautilus'
+  },
   // More bindings can be added, for example:
   // {
   //   shortcut: 'F11',
