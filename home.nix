@@ -254,6 +254,9 @@
       "terminal.integrated.enableMultiLinePasteWarning" = false;
       "explorer.confirmDelete" = false;
       "window.zoomLevel" = -1;
+      "files.associations" = {
+        "*.glsl" = "c";
+      };
     };
     keybindings = [
       {
