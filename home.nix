@@ -318,6 +318,12 @@
         error_symbol = "[➜](bold red)";
       };
 
+      battery = {
+        display = [
+          {threshold = 30; style = "bold red";}
+        ];
+      };
+
       # package.disabled = true;
     };
   };
