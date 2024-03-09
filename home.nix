@@ -159,6 +159,7 @@
       "gcb" = "git checkout -b";
       "gsw" = "git switch";
       "gco" = "git checkout";
+      "gme" = "git merge";
       "gra" = "git remote add";
       "grv" = "git remote --verbose";
       "gca" = "git commit --amend";
