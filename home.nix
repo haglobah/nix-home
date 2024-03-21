@@ -153,6 +153,8 @@
       "gcm" = "git commit -m";
       "gam" = "git add . && git commit -m";
       "gp" = "git push";
+      "gpu" = "git push --set-upstream";
+      "gpo" = "git push --set-upstream origin";
       "gf" = "git pull";
       "gF" = "git fetch";
       "gun" = "git rm --cached";
@@ -161,9 +163,11 @@
       "gco" = "git checkout";
       "gme" = "git merge";
       "gra" = "git remote add";
+      "gro" = "git remote add origin";
       "grv" = "git remote --verbose";
       "gca" = "git commit --amend";
       "gcan" = "git commit --amend --no-edit";
+      "gacan" = "git add . && git commit --amend --no-edit";
       "gcl" = "git clone";
       "gd" = "git diff";
       "gsh" = "git stash";
@@ -176,9 +180,11 @@
 
       "nf" = "nix flake";
       "nfc" = "nix flake check";
-      "nft" = "nix flake init --template ";
+      "nft" = "nix flake init --template";
       "nfs" = "nix flake show";
       "nfu" = "nix flake update";
+      "nr" = "nix run . --";
+      "nl" = "nix run -L . --";
       "nb" = "nix build";
       "nd" = "nix develop";
 
