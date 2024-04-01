@@ -95,6 +95,7 @@
 
     ".local/share/gnome-shell/extensions/gnome-magic-window@adrienverge/extension.js".source = dotfiles/gnome-magic-window/extension.js;
     ".local/share/gnome-shell/extensions/gnome-magic-window@adrienverge/metadata.json".source = dotfiles/gnome-magic-window/metadata.json;
+    ".config/git/better-branch.sh".source = dotfiles/git/better-branch.sh;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
@@ -127,6 +128,9 @@
     extraConfig = {
       core.sshCommand = "ssh -i ~/.ssh/id_rsa -F /dev/null";
       init.defaultBranch = "main";
+      rerere.enabled = true;
+      branch.sort = "-committerdate";
+      alias.better-branch = "!better-branch.sh";
     };
   };
 
@@ -170,7 +174,7 @@
       "gacan" = "git add . && git commit --amend --no-edit";
       "gcl" = "git clone";
       "gd" = "git diff";
-      "gsh" = "git stash";
+      "gsh" = "git stash --all";
 
       "nix-list" = "nix profile history --profile /nix/var/nix/profiles/system";
       "nix-rm-boot-entries" = "nix profile wipe-history --profile /nix/var/nix/profiles/system --older-than 30d";
