@@ -95,7 +95,6 @@
 
     ".local/share/gnome-shell/extensions/gnome-magic-window@adrienverge/extension.js".source = dotfiles/gnome-magic-window/extension.js;
     ".local/share/gnome-shell/extensions/gnome-magic-window@adrienverge/metadata.json".source = dotfiles/gnome-magic-window/metadata.json;
-    ".config/git/better-branch.sh".source = dotfiles/git/better-branch.sh;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
@@ -130,7 +129,6 @@
       init.defaultBranch = "main";
       rerere.enabled = true;
       branch.sort = "-committerdate";
-      alias.better-branch = "!better-branch.sh";
     };
   };
 
@@ -152,11 +150,13 @@
       "gu" = "git restore --staged";
       "gs" = "git status -s -b";
       "gst" = "git status";
-      "gb" = "git branch -a -v";
+      "gbr" = "git branch -a -v";
+      "gb" = "git for-each-ref --color --sort=-committerdate --format=$'%(color:green)%(ahead-behind:HEAD)\t%(color:blue)%(refname:short)\t%(color:yellow)%(committerdate:relative)\t%(color:default)%(describe)'     refs/ | sed 's/ /\t/' | column --separator=$'\t' --table --table-columns='Ahead,Behind,Branch Name,Last Commit,Description'";
       "gl" = "git log --oneline --decorate --graph";
       "gcm" = "git commit -m";
       "gam" = "git add . && git commit -m";
       "gp" = "git push";
+      "gpf" = "git push --force-with-lease";
       "gpu" = "git push --set-upstream";
       "gpo" = "git push --set-upstream origin";
       "gf" = "git pull";
@@ -173,7 +173,8 @@
       "gcan" = "git commit --amend --no-edit";
       "gacan" = "git add . && git commit --amend --no-edit";
       "gcl" = "git clone";
-      "gd" = "git diff";
+      "gd" = "git diff --word-diff";
+      "gdl" = "git diff";
       "gsh" = "git stash --all";
 
       "nix-list" = "nix profile history --profile /nix/var/nix/profiles/system";
