@@ -175,7 +175,7 @@
       "gcl" = "git clone";
       "gd" = "git diff --word-diff";
       "gdl" = "git diff";
-      "gsh" = "git stash --all";
+      "gsh" = "git stash";
 
       "nix-list" = "nix profile history --profile /nix/var/nix/profiles/system";
       "nix-rm-boot-entries" = "nix profile wipe-history --profile /nix/var/nix/profiles/system --older-than 30d";
