@@ -312,6 +312,10 @@
         "command" = "-workbench.action.terminal.split";
         "when" = "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile";
       }
+      {
+        "key" = "ctrl+n";
+        "command" = "explorer.newFile";
+      }
     ];
   };
 
