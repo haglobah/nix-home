@@ -149,10 +149,10 @@
       "ga" = "git add";
       "gu" = "git restore --staged";
       "gs" = "git status -s -b";
-      "gst" = "git status";
       "gbr" = "git branch -a -v";
       "gb" = "git for-each-ref --color --sort=-committerdate --format=$'%(color:green)%(ahead-behind:HEAD)\t%(color:blue)%(refname:short)\t%(color:yellow)%(committerdate:relative)\t%(color:default)%(describe)'     refs/ | sed 's/ /\t/' | column --separator=$'\t' --table --table-columns='Ahead,Behind,Branch Name,Last Commit,Description'";
       "gl" = "git log --oneline --decorate --graph";
+      "gls" = "git log --graph --stat";
       "gcm" = "git commit -m";
       "gam" = "git add . && git commit -m";
       "gp" = "git push";
@@ -175,7 +175,8 @@
       "gcl" = "git clone";
       "gd" = "git diff --word-diff";
       "gdl" = "git diff";
-      "gsh" = "git stash";
+      "gst" = "git stash";
+      "gsh" = "git show";
 
       "nix-list" = "nix profile history --profile /nix/var/nix/profiles/system";
       "nix-rm-boot-entries" = "nix profile wipe-history --profile /nix/var/nix/profiles/system --older-than 30d";
