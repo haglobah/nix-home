@@ -96,6 +96,10 @@
     ".local/share/gnome-shell/extensions/gnome-magic-window@adrienverge/extension.js".source = dotfiles/gnome-magic-window/extension.js;
     ".local/share/gnome-shell/extensions/gnome-magic-window@adrienverge/metadata.json".source = dotfiles/gnome-magic-window/metadata.json;
 
+    ".config/doom/config.el".source = dotfiles/doom/config.el;
+    ".config/doom/init.el".source = dotfiles/doom/init.el;
+    ".config/doom/packages.el".source = dotfiles/doom/packages.el;
+
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose
