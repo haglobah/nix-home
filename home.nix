@@ -256,6 +256,7 @@
       "editor.scrollbar.verticalScrollbarSize" = 3;
       "editor.scrollbar.horizontalScrollbarSize" = 3;
       "editor.bracketPairColorization.enabled" = true;
+      "window.titleBarStyle" = "custom";
       "workbench.colorCustomizations" = {
         "editorBracketHighlight.foreground1" = "#5caeef";
         "editorBracketHighlight.foreground2" = "#dfb976";
