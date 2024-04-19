@@ -145,10 +145,12 @@
       "l" = "lla";
       "mv" = "mv -i";
       "rm" = "rm -i";
+      "wh" = "type -a";
       "which" = "type -a";
 
       "grep" = "grep --color=auto";
 
+      "g" = "git";
       "gi" = "git init";
       "ga" = "git add";
       "gu" = "git restore --staged";
@@ -182,6 +184,7 @@
       "gst" = "git stash";
       "gsh" = "git show";
 
+      "n" = "nix";
       "nix-list" = "nix profile history --profile /nix/var/nix/profiles/system";
       "nix-rm-boot-entries" = "nix profile wipe-history --profile /nix/var/nix/profiles/system --older-than 30d";
       "nre" = "sudo nixos-rebuild switch --flake .";
