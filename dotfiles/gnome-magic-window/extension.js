@@ -21,8 +21,8 @@ const BINDINGS = [
   },
   {
     shortcut: '<Super>t',
-    title: 'Gnome-Terminal',
-    command: 'gnome-terminal'
+    title: 'Kitty',
+    command: 'kitty'
   },
   {
     shortcut: '<Super>f',

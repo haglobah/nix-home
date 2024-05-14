@@ -54,7 +54,9 @@
     
     gnome.gnome-terminal
     gnome.gnome-tweaks
-    gnomeExtensions.pop-shell
+    # gnomeExtensions.pop-shell
+    # gnomeExtensions.user-themes
+    # palenight-theme
 
     ripgrep
     fd
@@ -75,13 +77,33 @@
   ];
 
   dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
+
+    "org/gnome/terminal/legacy/keybindings" = {
+      close-tab = "<Primary>w";
+      close-window = "<Primary>q";
+      move-tab-left = "<Shift><Alt>Left";
+      move-tab-right = "<Shift><Alt>Right";
+      new-tab = "<Primary>t";
+      new-window = "<Primary>n";
+      next-tab = "<Alt>Right";
+      prev-tab = "<Alt>Left";
+    };
+
     "org/gnome/shell" = {
       disable-user-extensions = false;
       
       enabled-extensions = [
+        # "user-theme@gnome-shell-extensions.gcampax.github.com"
         # "pop-shell@system76.com"
         "gnome-magic-window@adrienverge"
       ];
+
+      # "extensions/user-theme" = {
+      #   name = "palenight";
+      # };
     };
   };
 
@@ -134,6 +156,21 @@
       rerere.enabled = true;
       branch.sort = "-committerdate";
     };
+  };
+
+  programs.kitty = {
+    enable = true;
+    keybindings = {
+      "ctrl+t" = "new_tab";
+      "ctrl+w" = "close_tab";
+      "ctrl+n" = "new_window";
+      "alt+left" = "prev_tab";
+      "alt+right" = "next_tab";
+      "alt+shift+left" = "move_tab_backward";
+      "alt+shift+right" = "next_tab_forward";
+    };
+
+    shellIntegration.enableBashIntegration = true;
   };
 
   programs.bash = {
