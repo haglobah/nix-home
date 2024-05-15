@@ -179,6 +179,26 @@
     };
   };
 
+  programs.himalaya = {
+    enable = true;
+  };
+
+  accounts.email.accounts = {
+    posteo = {
+      primary = true;
+      himalaya.enable = true;
+      address = "bah@posteo.de";
+      realName = "Beat Hagenlocher";
+      userName = "beat";
+      passwordCommand = "bw login --api-key && bw unlock && bw get password bah_hagenlob@posteo.de";
+      imap = {
+        host = "posteo.de";
+        port = 993;
+        tls.enable = true;
+      };
+    };
+  };
+
   programs.kitty = {
     enable = true;
     shellIntegration.enableBashIntegration = true;
