@@ -154,6 +154,16 @@
       condition = "gitdir:~/ag/";
       contents = { user.email = "beat.hagenlocher@active-group.de"; };
     }];
+    ignores = [
+      # Direnv
+      ".direnv/"
+
+      # Emacs
+      "*~"
+      "\\#*\\#"
+      ".\\#*"
+      ".dir-locals.el"
+    ];
     extraConfig = {
       core.sshCommand = "ssh -i ~/.ssh/id_rsa -F /dev/null";
       init.defaultBranch = "main";
