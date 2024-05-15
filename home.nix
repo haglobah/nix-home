@@ -51,6 +51,7 @@
     cachix
     ydotool
     wl-clipboard
+    thunderbird
     
     gnome.gnome-terminal
     gnome.gnome-tweaks
