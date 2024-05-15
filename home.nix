@@ -275,6 +275,7 @@
       "nf" = "nix flake";
       "nfc" = "nix flake check";
       "nft" = "nix flake init --template";
+      "nfn" = "nix flake new --template";
       "nfs" = "nix flake show";
       "nfu" = "nix flake update";
       "nr" = "nix run . --";
