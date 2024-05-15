@@ -30,6 +30,11 @@ const BINDINGS = [
     command: 'firefox'
   },
   {
+    shortcut: '<Super>u',
+    title: 'Thunderbird',
+    command: 'thunderbird'
+  },
+  {
     shortcut: '<Super>c',
     title: 'Code',
     command: 'code'
