@@ -150,6 +150,10 @@
     enable = true;
     userEmail = "bah@posteo.de";
     userName = "Beat Hagenlocher";
+    includes = [{
+      condition = "gitdir:~/ag/";
+      contents = { user.email = "beat.hagenlocher@active-group.de"; };
+    }];
     extraConfig = {
       core.sshCommand = "ssh -i ~/.ssh/id_rsa -F /dev/null";
       init.defaultBranch = "main";
