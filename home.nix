@@ -160,6 +160,8 @@
 
   programs.kitty = {
     enable = true;
+    shellIntegration.enableBashIntegration = true;
+
     keybindings = {
       "ctrl+t" = "new_tab";
       "ctrl+w" = "close_tab";
@@ -170,7 +172,7 @@
       "alt+shift+right" = "next_tab_forward";
     };
 
-    shellIntegration.enableBashIntegration = true;
+    theme = "Doom One";
   };
 
   programs.bash = {
