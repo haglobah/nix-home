@@ -224,6 +224,7 @@
       "cp" = "cp -i";
       "h" = "history";
       "l" = "lla";
+      "lta" = "lt -la";
       "mv" = "mv -i";
       "rm" = "rm -i";
       "wh" = "type -a";
@@ -278,7 +279,8 @@
       "nfn" = "nix flake new --template";
       "nfs" = "nix flake show";
       "nfu" = "nix flake update";
-      "nr" = "nix run . --";
+      "nr" = "nix run";
+      "nru" = "nix run . --";
       "nl" = "nix run -L . --";
       "nb" = "nix build";
       "nd" = "nix develop";
