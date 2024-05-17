@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -215,6 +215,25 @@
     };
 
     theme = "Doom One";
+  };
+
+  programs.firefox = {
+    enable = true;
+    profiles.beat = {
+
+      settings = {
+        "signon.rememberSignons" = false;
+        "layout.spellcheckDefault" = "0";
+      };
+
+      extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+        bitwarden
+        darkreader
+        videospeed
+        vimium
+        ublock-origin
+      ];
+    };
   };
 
   programs.bash = {

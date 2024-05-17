@@ -15,16 +15,22 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     alles = {
       url = "github:haglobah/alles";
     };
+
     agenix = {
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { nixpkgs, home-manager, nix-index-database, alles, agenix, ... }:
+  outputs = { nixpkgs, home-manager, nix-index-database, alles, agenix, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -32,6 +38,7 @@
       homeConfigurations."beat" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
+        extraSpecialArgs = { inherit inputs; };
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
         modules = [ 
