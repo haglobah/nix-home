@@ -62,6 +62,7 @@ in
     wl-clipboard
     thunderbird
     
+    eww
     dunst
     libnotify
     wofi
@@ -139,7 +140,7 @@ in
     ".config/eww/eww.scss".source = dotfiles/eww/eww.scss;
     ".config/eww/eww.yuck".source = dotfiles/eww/eww.yuck;
 
-    ".config/hypr/hyprland.conf".source = dotfiles/hypr/hyprland.conf;
+    # ".config/hypr/hyprland.conf".source = dotfiles/hypr/hyprland.conf;
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose
@@ -163,11 +164,13 @@ in
 
   wayland.windowManager.hyprland = {
     enable = true;
+
+    extraConfig = (builtins.readFile ./dotfiles/hypr/hyprland.conf);
   };
 
-  programs.eww = {
-    enable = true;
-  };
+  # programs.eww = {
+  #   enable = true;
+  # };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
