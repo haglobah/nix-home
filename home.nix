@@ -1,5 +1,14 @@
 { config, pkgs, inputs, ... }:
 
+let
+  startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
+    
+    
+    eww &
+
+    dunst
+  '';
+in
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -52,6 +61,11 @@
     ydotool
     wl-clipboard
     thunderbird
+    
+    eww
+    dunst
+    libnotify
+    wofi
     
     gnome.gnome-terminal
     gnome.gnome-tweaks
@@ -142,6 +156,14 @@
   # if you don't want to manage your shell through Home Manager.
   home.sessionVariables = {
     # EDITOR = "emacs";
+  };
+
+  wayland.windowManager.hyprland = {
+    enable = true;
+
+    settings = {
+      exec-once = ''${startupScript}/bin/start'';
+    };
   };
 
   # Let Home Manager install and manage itself.
