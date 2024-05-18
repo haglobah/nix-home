@@ -62,7 +62,6 @@ in
     wl-clipboard
     thunderbird
     
-    eww
     dunst
     libnotify
     wofi
@@ -137,6 +136,10 @@ in
     ".config/doom/init.el".source = dotfiles/doom/init.el;
     ".config/doom/packages.el".source = dotfiles/doom/packages.el;
 
+    ".config/eww/eww.scss".source = dotfiles/eww/eww.scss;
+    ".config/eww/eww.yuck".source = dotfiles/eww/eww.yuck;
+
+    ".config/hypr/hyprland.conf".source = dotfiles/hypr/hyprland.conf;
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose
@@ -160,10 +163,10 @@ in
 
   wayland.windowManager.hyprland = {
     enable = true;
+  };
 
-    settings = {
-      exec-once = ''${startupScript}/bin/start'';
-    };
+  programs.eww = {
+    enable = true;
   };
 
   # Let Home Manager install and manage itself.
