@@ -135,6 +135,10 @@
       source = dotfiles/hypr/focus_or_start.sh;
       executable = true;
     };
+    # ".config/hypr/focus_or_special.sh" = {
+    #   source = dotfiles/hypr/focus_or_special.sh;
+    #   executable = true;
+    # };
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose
