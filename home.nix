@@ -66,6 +66,7 @@ in
     dunst
     libnotify
     wofi
+    jq
     
     gnome.gnome-terminal
     gnome.gnome-tweaks
