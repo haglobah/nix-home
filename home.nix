@@ -37,7 +37,6 @@
     # pkgs.hello
     wget
     curl
-    firefox
     chromium
     obsidian
     discord
@@ -212,7 +211,9 @@
   accounts.email.accounts = {
     posteo = {
       primary = true;
-      himalaya.enable = true;
+      himalaya = {
+        enable = true;
+      };
       address = "bah@posteo.de";
       realName = "Beat Hagenlocher";
       userName = "beat";
@@ -458,7 +459,7 @@
     ];
   };
 
-  catppuccin.flavour = "frappe";
+  catppuccin.flavour = "macchiato";
 
   gtk.catppuccin = {
     enable = true;
@@ -508,6 +509,7 @@
     enable = true;
   };
   programs.fzf = {
+    catppuccin.enable = true;
     enable = true;
   };
 }
