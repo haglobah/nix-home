@@ -2,7 +2,6 @@
 
 execCommand=$1
 className=$2
-workspaceOnStart=$3
 
 running=$(hyprctl -j clients | jq -r ".[] | select(.class == \"${className}\")")
 echo $running
@@ -10,8 +9,8 @@ echo $running
 if [[ $running != "" ]]
 then
 	echo "focus"
-	hyprctl dispatch focusWindow pid:$(pidof -s ${execCommand})
+	hyprctl dispatch focuswindow ${className}
 else 
 	echo "start"
-	hyprctl exec ${execCommand} & 
+	hyprctl dispatch exec ${execCommand} & 
 fi
