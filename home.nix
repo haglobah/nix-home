@@ -140,7 +140,10 @@ in
     ".config/eww/eww.scss".source = dotfiles/eww/eww.scss;
     ".config/eww/eww.yuck".source = dotfiles/eww/eww.yuck;
 
-    # ".config/hypr/hyprland.conf".source = dotfiles/hypr/hyprland.conf;
+    ".config/hypr/focus_or_start.sh" = {
+      source = dotfiles/hypr/focus_or_start.sh;
+      executable = true;
+    };
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose
