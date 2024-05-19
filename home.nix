@@ -1,14 +1,4 @@
 { config, pkgs, inputs, ... }:
-
-let
-  startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-    
-    
-    eww &
-
-    dunst
-  '';
-in
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -62,7 +52,7 @@ in
     wl-clipboard
     thunderbird
     
-    eww
+    eww-wayland
     dunst
     libnotify
     wofi
