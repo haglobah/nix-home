@@ -37,7 +37,6 @@
     # pkgs.hello
     wget
     curl
-    bat
     firefox
     chromium
     obsidian
@@ -52,7 +51,7 @@
     wl-clipboard
     thunderbird
     
-    eww-wayland
+    eww
     dunst
     libnotify
     wofi
@@ -230,6 +229,8 @@
     enable = true;
     shellIntegration.enableBashIntegration = true;
 
+    catppuccin.enable = true;
+
     keybindings = {
       "ctrl+t" = "new_tab";
       "ctrl+w" = "close_tab";
@@ -238,9 +239,10 @@
       "alt+right" = "next_tab";
       "alt+shift+left" = "move_tab_backward";
       "alt+shift+right" = "next_tab_forward";
+      "ctrl+plus" = "change_font_size all +2.0";
+      "ctrl+equal" = "change_font_size all 10.0";
+      "ctrl+minus" = "change_font_size all -2.0";
     };
-
-    theme = "Doom One";
   };
 
   programs.firefox = {
@@ -456,8 +458,18 @@
     ];
   };
 
+  catppuccin.flavour = "frappe";
+
+  gtk.catppuccin = {
+    enable = true;
+    cursor.enable = true;
+    icon.enable = true;
+  };
+
   programs.starship = {
     enable = true;
+
+    catppuccin.enable = true;
     # Configuration written to ~/.config/starship.toml
     settings = {
       add_newline = false;
@@ -480,6 +492,11 @@
 
       # package.disabled = true;
     };
+  };
+
+  programs.bat = {
+    enable = true;
+    catppuccin.enable = true;
   };
 
   programs.eza = {

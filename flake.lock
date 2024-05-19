@@ -10,11 +10,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1712079060,
-        "narHash": "sha256-/JdiT9t+zzjChc5qQiF+jhrVhRt8figYH29rZO7pFe4=",
+        "lastModified": 1715290355,
+        "narHash": "sha256-2T7CHTqBXJJ3ZC6R/4TXTcKoXWHcvubKNj9SfomURnw=",
         "owner": "ryantm",
         "repo": "agenix",
-        "rev": "1381a759b205dff7a6818733118d02253340fd5e",
+        "rev": "8d37c5bdeade12b6479c85acd133063ab53187a0",
         "type": "github"
       },
       "original": {
@@ -40,6 +40,21 @@
       "original": {
         "owner": "haglobah",
         "repo": "alles",
+        "type": "github"
+      }
+    },
+    "catppuccin": {
+      "locked": {
+        "lastModified": 1715659881,
+        "narHash": "sha256-emodPGTXLVqlcOkqbJiOUkf5vo8WWujgzKxms1B+iBs=",
+        "owner": "catppuccin",
+        "repo": "nix",
+        "rev": "d6344610c04af0f8e315fef45dd3b854014b119e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "nix",
         "type": "github"
       }
     },
@@ -96,11 +111,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1715932055,
-        "narHash": "sha256-oW3lcYl3iMh3Bh8bKtSCpQAcO+YJ4oHwbZ3TN1IDZ4I=",
+        "lastModified": 1716091392,
+        "narHash": "sha256-TBfmY5MNJr7yc0VNKO+bXjxVspUa8QNXsMgF7j6dDhk=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "01bf95a3f852c64976d2a7597f15be5030a5b803",
+        "rev": "6f9aa31fb6e3d154fa8558f1b4b583ff40c3f928",
         "type": "gitlab"
       },
       "original": {
@@ -188,11 +203,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1713391096,
-        "narHash": "sha256-5xkzsy+ILgQlmvDDipL5xqAehnjWBenAQXV4/NLg2dE=",
+        "lastModified": 1715930644,
+        "narHash": "sha256-W9pyM3/vePxrffHtzlJI6lDS3seANQ+Nqp+i58O46LI=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "f46814ec7cbef9c2aef18ca1cbe89f2bb1e8c394",
+        "rev": "e3ad5108f54177e6520535768ddbf1e6af54b59d",
         "type": "github"
       },
       "original": {
@@ -242,11 +257,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1715972853,
-        "narHash": "sha256-6KHwpBUzLY2IajVWxBPLYAgjazT1QDyufTkLXbiWIoI=",
+        "lastModified": 1716063601,
+        "narHash": "sha256-lH2CLdRQFtbQVauhLFDbPWTGmj7LgblMg2dq9thd0Zc=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "2ead1fd22103ce065661555513bace5897083ded",
+        "rev": "f8857e6072bd85b95393499688872aaf7f088b5b",
         "type": "github"
       },
       "original": {
@@ -364,11 +379,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1713067146,
-        "narHash": "sha256-9D20xjblGKEVRVCnM3qWhiizEa9i6OpK6xQJajwcwOQ=",
+        "lastModified": 1716088072,
+        "narHash": "sha256-ZXzV39r4ShjS6lvhOX+oN0Vazg5A/zibJDzE2r1jlRM=",
         "owner": "Mic92",
         "repo": "nix-index-database",
-        "rev": "93aed67288be60c9ef6133ba2f8de128f4ef265c",
+        "rev": "6b94c48c3bb22d5181333c3fb71beff44116e251",
         "type": "github"
       },
       "original": {
@@ -413,16 +428,16 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1713145326,
-        "narHash": "sha256-m7+IWM6mkWOg22EC5kRUFCycXsXLSU7hWmHdmBfmC3s=",
+        "lastModified": 1715961556,
+        "narHash": "sha256-+NpbZRCRisUHKQJZF3CT+xn14ZZQO+KjxIIanH3Pvn4=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "53a2c32bc66f5ae41a28d7a9a49d321172af621e",
+        "rev": "4a6b83b05df1a8bd7d99095ec4b4d271f2956b64",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
-        "ref": "nixos-23.11",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -431,6 +446,7 @@
       "inputs": {
         "agenix": "agenix",
         "alles": "alles",
+        "catppuccin": "catppuccin",
         "firefox-addons": "firefox-addons",
         "home-manager": "home-manager_2",
         "hyprland": "hyprland",

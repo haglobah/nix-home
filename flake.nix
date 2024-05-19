@@ -3,7 +3,7 @@
 
   inputs = {
     # Specify the source of Home Manager and Nixpkgs.
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -19,6 +19,8 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    catppuccin.url = "github:catppuccin/nix";
 
     hyprland = {
       url = "github:hyprwm/Hyprland";
@@ -53,6 +55,7 @@
         modules = [ 
           ./home.nix
           nix-index-database.hmModules.nix-index
+          inputs.catppuccin.homeManagerModules.catppuccin
           {
             home.packages = [
               alles.packages.${system}.default
