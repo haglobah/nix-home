@@ -239,9 +239,9 @@
       "alt+right" = "next_tab";
       "alt+shift+left" = "move_tab_backward";
       "alt+shift+right" = "next_tab_forward";
-      "ctrl+plus" = "change_font_size all +2.0";
+      "ctrl+plus" = "change_font_size all +1.0";
       "ctrl+equal" = "change_font_size all 10.0";
-      "ctrl+minus" = "change_font_size all -2.0";
+      "ctrl+minus" = "change_font_size all -1.0";
     };
   };
 
