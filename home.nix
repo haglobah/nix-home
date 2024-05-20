@@ -313,6 +313,7 @@
       "gdl" = "git diff";
       "gst" = "git stash";
       "gsh" = "git show";
+      "gmb" = "git checkout HEAD^";
 
       "n" = "nix";
       "nix-list" = "nix profile history --profile /nix/var/nix/profiles/system";
@@ -359,6 +360,10 @@
       gm () {
         git add "''${@:2}" && git commit --message="$1"
       }
+      gmf () {
+        git checkout $(git rev-list --topo-order HEAD..''${1:-main})
+      }
+
 
       export PATH="$PATH:~/.config/emacs/bin"
       export PATH="$PATH:~/.emacs.d/bin"
