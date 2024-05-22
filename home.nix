@@ -487,6 +487,66 @@
         "key" =  "ctrl+,";
         "command" =  "-workbench.action.openSettings";
       }
+      {
+        "key" = "alt+right";
+        "command" = "paredit.sexpRangeExpansion";
+        "when" = "calva:keybindingsEnabled && editorTextFocus && !calva:cursorInComment && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
+      }
+      {
+        "key" = "shift+alt+right";
+        "command" = "-paredit.sexpRangeExpansion";
+        "when" = "calva:keybindingsEnabled && editorTextFocus && !calva:cursorInComment && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
+      }
+      {
+        "key" = "alt+left";
+        "command" = "paredit.sexpRangeContraction";
+        "when" = "calva:keybindingsEnabled && editorTextFocus && !calva:cursorInComment && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
+      }
+      {
+        "key" = "shift+alt+left";
+        "command" = "-paredit.sexpRangeContraction";
+        "when" = "calva:keybindingsEnabled && editorTextFocus && !calva:cursorInComment && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
+      }
+      {
+        "key" = "alt+,";
+        "command" = "paredit.barfSexpForward";
+        "when" = "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
+      }
+      {
+        "key" = "ctrl+alt+,";
+        "command" = "-paredit.barfSexpForward";
+        "when" = "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
+      }
+      {
+        "key" = "ctrl+alt+,";
+        "command" = "paredit.barfSexpBackward";
+        "when" = "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
+      }
+      {
+        "key" = "ctrl+shift+alt+right";
+        "command" = "-paredit.barfSexpBackward";
+        "when" = "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
+      }
+      {
+        "key" = "alt+.";
+        "command" = "paredit.slurpSexpForward";
+        "when" = "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
+      }
+      {
+        "key" = "ctrl+alt+.";
+        "command" = "-paredit.slurpSexpForward";
+        "when" = "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
+      }
+      {
+        "key" = "ctrl+alt+.";
+        "command" = "paredit.slurpSexpBackward";
+        "when" = "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
+      }
+      {
+        "key" = "ctrl+shift+alt+left";
+        "command" = "-paredit.slurpSexpBackward";
+        "when" = "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
+      }
     ];
   };
 
