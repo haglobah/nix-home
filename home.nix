@@ -22,13 +22,6 @@
     ];
   };
 
-  # nixpkgs.overlays = [
-  #   (import (builtins.fetchGit {
-  #     url = "https://github.com/nix-community/emacs-overlay.git";
-  #     rev = "4baba64e8088c2cdbde661d6697d1fff3ba59f6d";
-  #   }))
-  # ];
-
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
@@ -56,11 +49,7 @@
     wofi
     jq
     
-    gnome.gnome-terminal
     gnome.gnome-tweaks
-    # gnomeExtensions.pop-shell
-    # gnomeExtensions.user-themes
-    # palenight-theme
 
     ripgrep
     fd
@@ -100,14 +89,8 @@
       disable-user-extensions = false;
       
       enabled-extensions = [
-        # "user-theme@gnome-shell-extensions.gcampax.github.com"
-        # "pop-shell@system76.com"
         "gnome-magic-window@adrienverge"
       ];
-
-      # "extensions/user-theme" = {
-      #   name = "palenight";
-      # };
     };
   };
 
@@ -316,6 +299,7 @@
       "gmb" = "git checkout HEAD^";
 
       "n" = "nix";
+      "ni" = "nix repl";
       "nix-list" = "nix profile history --profile /nix/var/nix/profiles/system";
       "nix-rm-boot-entries" = "nix profile wipe-history --profile /nix/var/nix/profiles/system --older-than 30d";
       "nre" = "sudo nixos-rebuild switch --flake .";
