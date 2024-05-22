@@ -461,6 +461,32 @@
         "key" = "ctrl+n";
         "command" = "explorer.newFile";
       }
+      {
+        "key" = "ctrl+,";
+        "command" = "editor.action.quickFix";
+        "when" = "editorHasCodeActionsProvider && textInputFocus && !editorReadonly";
+      }
+      {
+        "key" = "ctrl+.";
+        "command" = "-editor.action.quickFix";
+        "when" = "editorHasCodeActionsProvider && textInputFocus && !editorReadonly";
+      }
+      {
+        "key" = "ctrl+.";
+        "command" = "workbench.action.showCommands";
+      }
+      {
+        "key" = "ctrl+shift+p";
+        "command" = "-workbench.action.showCommands";
+      }
+      {
+        "key" =  "ctrl+shift+,";
+        "command" =  "workbench.action.openSettings";
+      }
+      {
+        "key" =  "ctrl+,";
+        "command" =  "-workbench.action.openSettings";
+      }
     ];
   };
 
