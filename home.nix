@@ -22,12 +22,12 @@
     ];
   };
 
-  nixpkgs.overlays = [
-    (import (builtins.fetchGit {
-      url = "https://github.com/nix-community/emacs-overlay.git";
-      rev = "4baba64e8088c2cdbde661d6697d1fff3ba59f6d";
-    }))
-  ];
+  # nixpkgs.overlays = [
+  #   (import (builtins.fetchGit {
+  #     url = "https://github.com/nix-community/emacs-overlay.git";
+  #     rev = "4baba64e8088c2cdbde661d6697d1fff3ba59f6d";
+  #   }))
+  # ];
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -64,7 +64,7 @@
 
     ripgrep
     fd
-    emacs-unstable
+    emacs29
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
