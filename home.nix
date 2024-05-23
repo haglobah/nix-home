@@ -257,7 +257,7 @@
       "l" = "lla";
       "lta" = "lt -la";
       "mv" = "mv -i";
-      "rm" = "rm -i";
+      "rm" = "rm -i";my
       "wh" = "type -a";
       "which" = "type -a";
 
@@ -402,34 +402,34 @@
     };
     keybindings = [
       {
-          "key" = "shift+alt+down";
-          "command" = "editor.action.copyLinesDownAction";
-          "when" = "editorTextFocus && !editorReadonly";
+        "key" = "shift+alt+down";
+        "command" = "editor.action.copyLinesDownAction";
+        "when" = "editorTextFocus && !editorReadonly";
       }
       {
-          "key" = "ctrl+shift+alt+down";
-          "command" = "-editor.action.copyLinesDownAction";
-          "when" = "editorTextFocus && !editorReadonly";
+        "key" = "ctrl+shift+alt+down";
+        "command" = "-editor.action.copyLinesDownAction";
+        "when" = "editorTextFocus && !editorReadonly";
       }
       {
-          "key" = "shift+alt+up";
-          "command" = "editor.action.copyLinesUpAction";
-          "when" = "editorTextFocus && !editorReadonly";
+        "key" = "shift+alt+up";
+        "command" = "editor.action.copyLinesUpAction";
+        "when" = "editorTextFocus && !editorReadonly";
       }
       {
-          "key" = "ctrl+shift+alt+up";
-          "command" = "-editor.action.copyLinesUpAction";
-          "when" = "editorTextFocus && !editorReadonly";
+        "key" = "ctrl+shift+alt+up";
+        "command" = "-editor.action.copyLinesUpAction";
+        "when" = "editorTextFocus && !editorReadonly";
       }
       {
-          "key" = "shift+alt+up";
-          "command" = "-editor.action.insertCursorAbove";
-          "when" = "editorTextFocus";
+        "key" = "shift+alt+up";
+        "command" = "-editor.action.insertCursorAbove";
+        "when" = "editorTextFocus";
       }
       {
-          "key" = "shift+alt+down";
-          "command" = "-editor.action.insertCursorBelow";
-          "when" = "editorTextFocus";
+        "key" = "shift+alt+down";
+        "command" = "-editor.action.insertCursorBelow";
+        "when" = "editorTextFocus";
       }
       {
         "key" = "ctrl+shift+t";
