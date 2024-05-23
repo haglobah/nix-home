@@ -163,8 +163,9 @@
       contents = { user.email = "beat.hagenlocher@active-group.de"; };
     }];
     ignores = [
-      # Direnv
       ".direnv/"
+
+      ".calva"
 
       # Emacs
       "*~"
@@ -257,7 +258,7 @@
       "l" = "lla";
       "lta" = "lt -la";
       "mv" = "mv -i";
-      "rm" = "rm -i";my
+      "rm" = "rm -i";
       "wh" = "type -a";
       "which" = "type -a";
 
