@@ -539,7 +539,7 @@
         "when" = "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
       }
       {
-        "key" = "ctrl+alt+,";
+        "key" = "ctrl+alt+.";
         "command" = "paredit.barfSexpBackward";
         "when" = "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
       }
@@ -559,7 +559,7 @@
         "when" = "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
       }
       {
-        "key" = "ctrl+alt+.";
+        "key" = "ctrl+alt+,";
         "command" = "paredit.slurpSexpBackward";
         "when" = "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
       }
