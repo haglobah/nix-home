@@ -435,6 +435,7 @@
       "window.zoomLevel" = -1;
       "files.associations" = {
         "*.glsl" = "c";
+        "*.config" = "clojure";
       };
     };
     keybindings = [
