@@ -226,6 +226,7 @@
         branch.sort = "-committerdate";
         url = {
           "https://github.com/" = { insteadOf = "gh:"; };
+          "git@github.com:" = { insteadOf = "gs:"; };
           "git@github.com:haglobah/" = { insteadOf = "me:"; };
           "https://gitlab.com/" = { insteadOf = "gl:"; };
           "ssh://git@gitlab.active-group.de:1022/ag/" = { insteadOf = "ag:"; };
