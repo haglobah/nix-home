@@ -26,7 +26,7 @@
         "nru" = "nix run . --";
         "nl" = "nix run -L . --";
         "nb" = "nix build";
-        "nd" = "nix develop";
+        "nd" = "nix develop -c fish";
 
         "c" = "code . &";
         "gcb" = "git checkout -b";

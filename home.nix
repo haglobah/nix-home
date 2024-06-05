@@ -261,6 +261,10 @@
       shellIntegration.enableBashIntegration = true;
       shellIntegration.enableFishIntegration = true;
 
+      settings = {
+        shell = "fish";
+      };
+
       catppuccin.enable = true;
 
       keybindings = {
