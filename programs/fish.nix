@@ -28,6 +28,13 @@
         "nb" = "nix build";
         "nd" = "nix develop";
 
+        "c" = "code . &";
+        "gcb" = "git checkout -b";
+        "gsw" = "git switch";
+        "gsc" = "git switch -c";
+        "gco" = "git checkout";
+        "gme" = "git merge";
+
         "da" = "direnv allow";
         "dr" = "direnv reload";
       };
@@ -60,10 +67,6 @@
         "gf" = "git pull";
         "gF" = "git fetch";
         "gun" = "git rm --cached";
-        "gcb" = "git checkout -b";
-        "gsw" = "git switch";
-        "gco" = "git checkout";
-        "gme" = "git merge";
         "gra" = "git remote add";
         "gro" = "git remote add origin";
         "grv" = "git remote --verbose";
@@ -77,7 +80,6 @@
         "gsh" = "git show";
 
         "e" = "emacs";
-        "c" = "code . &";
         
         "hm" = "home-manager";
         "hsw" = "home-manager switch --flake .";
