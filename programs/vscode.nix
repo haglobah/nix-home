@@ -32,6 +32,7 @@
         "window.zoomLevel" = -1;
         "files.associations" = {
           "*.glsl" = "c";
+          "*.keymap" = "c";
           "*.config" = "clojure";
         };
       };
