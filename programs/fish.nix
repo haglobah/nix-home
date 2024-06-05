@@ -1,7 +1,7 @@
 { config, lib, pkgs, ...}:
 {
   config = {
-        programs.fish = {
+    programs.fish = {
       enable = true;
       shellAbbrs = {
         "wh" = "type -a";
@@ -111,6 +111,8 @@
         function gb
           git for-each-ref --color --sort=-committerdate --format="%{\e[32m%}%(ahead-behind:HEAD)\t%{\e[34m%}%(refname:short)\t%{\e[33m%}%(committerdate:relative)\t%{\e[0m%}%(describe)" refs/ | sed 's/ /\t/' | column --separator='\t' --table --table-columns='Ahead,Behind,Branch Name,Last Commit,Description'
         end
+
+        # bind " " expand-abbr or self-insert
 
         set -gx PATH $PATH ~/.config/emacs/bin"
         set -gx PATH $PATH ~/.emacs.d/bin"
