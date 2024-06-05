@@ -279,7 +279,7 @@
         "ctrl+equal" = "change_font_size all 10.0";
         "ctrl+minus" = "change_font_size all -1.0";
         "ctrl+backspace" = "send_text all \\x17";
-        # "ctrl+delete" = "send_text all \\x19";
+        "ctrl+delete" = "send_key alt+d";
       };
     };
 
