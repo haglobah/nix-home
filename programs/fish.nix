@@ -14,7 +14,10 @@
         "nix-rm-boot-entries" = "nix profile wipe-history --profile /nix/var/nix/profiles/system --older-than 30d";
         "nre" = "sudo nixos-rebuild switch --flake .";
         "nure" = "nix flake update && sudo nixos-rebuild switch --flake .";
-        "nsh" = "nix shell";
+        "nsh" = {
+          expansion = "nix shell n#% -c fish";
+          setCursor = true;
+        };
 
         "nf" = "nix flake";
         "nfc" = "nix flake check";
