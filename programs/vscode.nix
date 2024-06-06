@@ -34,6 +34,7 @@
           "*.glsl" = "c";
           "*.keymap" = "c";
           "*.config" = "clojure";
+          "*.env" = "shellscript";
         };
       };
       keybindings = [
