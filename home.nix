@@ -221,6 +221,7 @@
         ".dir-locals.el"
       ];
       extraConfig = {
+        color.ui = "auto";
         core.sshCommand = "ssh -i ~/.ssh/id_rsa -F /dev/null";
         init.defaultBranch = "main";
         rerere.enabled = true;
