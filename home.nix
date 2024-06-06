@@ -209,6 +209,7 @@
         contents = { user.email = "beat.hagenlocher@active-group.de"; };
       }];
       ignores = [
+        ".envrc"
         ".direnv/"
 
         ".calva"
