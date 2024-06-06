@@ -109,6 +109,14 @@
         }
         {
           "key" = "alt+right";
+          "command" = "workbench.action.focusNextGroup";
+        }
+        {
+          "key" = "alt+left";
+          "command" = "workbench.action.focusPreviousGroup";
+        }
+        {
+          "key" = "alt+right";
           "command" = "paredit.sexpRangeExpansion";
           "when" = "calva:keybindingsEnabled && editorTextFocus && !calva:cursorInComment && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
         }
