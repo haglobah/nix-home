@@ -4,7 +4,7 @@
   imports = [
     ./programs/vscode.nix
     ./programs/bash.nix
-    # ./programs/fish.nix
+    ./programs/fish.nix
   ];
 
   config = {
