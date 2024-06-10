@@ -82,6 +82,7 @@
       ripgrep
       fd
       emacs29
+      neovim
 
       chromium
       obsidian
