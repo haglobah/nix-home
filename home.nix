@@ -74,6 +74,15 @@
       # pkgs.hello
       wget
       curl
+      jq
+      tmux
+      cachix
+      ydotool
+      wl-clipboard
+      ripgrep
+      fd
+      emacs29
+
       chromium
       obsidian
       discord
@@ -81,25 +90,8 @@
       telegram-desktop
       slack
       zoom-us
-      tmux
-      cachix
-      ydotool
-      wl-clipboard
-      thunderbird
-      complete-alias
-      bash-completion
-      
-      eww
-      dunst
-      libnotify
-      wofi
-      jq
-      
+      thunderbird      
       gnome.gnome-tweaks
-
-      ripgrep
-      fd
-      emacs29
 
       # # It is sometimes useful to fine-tune packages, for example, by applying
       # # overrides. You can do that directly here, just don't forget the
@@ -118,17 +110,6 @@
     dconf.settings = {
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
-      };
-
-      "org/gnome/terminal/legacy/keybindings" = {
-        close-tab = "<Primary>w";
-        close-window = "<Primary>q";
-        move-tab-left = "<Shift><Alt>Left";
-        move-tab-right = "<Shift><Alt>Right";
-        new-tab = "<Primary>t";
-        new-window = "<Primary>n";
-        next-tab = "<Alt>Right";
-        prev-tab = "<Alt>Left";
       };
 
       "org/gnome/shell" = {
@@ -155,17 +136,6 @@
       ".config/doom/init.el".source = dotfiles/doom/init.el;
       ".config/doom/packages.el".source = dotfiles/doom/packages.el;
 
-      ".config/eww/eww.scss".source = dotfiles/eww/eww.scss;
-      ".config/eww/eww.yuck".source = dotfiles/eww/eww.yuck;
-
-      ".config/hypr/focus_or_start.sh" = {
-        source = dotfiles/hypr/focus_or_start.sh;
-        executable = true;
-      };
-      ".config/hypr/focus_or_special.sh" = {
-        source = dotfiles/hypr/focus_or_special.sh;
-        executable = true;
-      };
       # # You can also set the file content immediately.
       # ".gradle/gradle.properties".text = ''
       #   org.gradle.console=verbose
@@ -185,12 +155,6 @@
     # if you don't want to manage your shell through Home Manager.
     home.sessionVariables = {
       # EDITOR = "emacs";
-    };
-
-    wayland.windowManager.hyprland = {
-      enable = true;
-
-      extraConfig = (builtins.readFile ./dotfiles/hypr/hyprland.conf);
     };
 
     services.emacs.enable = true;
@@ -239,27 +203,27 @@
       };
     };
 
-    programs.himalaya = {
-      enable = true;
-    };
+    # programs.himalaya = {
+    #   enable = true;
+    # };
 
-    accounts.email.accounts = {
-      posteo = {
-        primary = true;
-        himalaya = {
-          enable = true;
-        };
-        address = "bah@posteo.de";
-        realName = "Beat Hagenlocher";
-        userName = "beat";
-        passwordCommand = "bw login --api-key && bw unlock && bw get password bah_hagenlob@posteo.de";
-        imap = {
-          host = "posteo.de";
-          port = 993;
-          tls.enable = true;
-        };
-      };
-    };
+    # accounts.email.accounts = {
+    #   posteo = {
+    #     primary = true;
+    #     himalaya = {
+    #       enable = true;
+    #     };
+    #     address = "bah@posteo.de";
+    #     realName = "Beat Hagenlocher";
+    #     userName = "beat";
+    #     passwordCommand = "bw login --api-key && bw unlock && bw get password bah_hagenlob@posteo.de";
+    #     imap = {
+    #       host = "posteo.de";
+    #       port = 993;
+    #       tls.enable = true;
+    #     };
+    #   };
+    # };
 
     programs.kitty = {
       enable = true;
