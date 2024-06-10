@@ -193,6 +193,8 @@
       extraConfig = (builtins.readFile ./dotfiles/hypr/hyprland.conf);
     };
 
+    services.emacs.enable = true;
+
     # programs.eww = {
     #   enable = true;
     # };
