@@ -3,7 +3,7 @@
         programs.vscode = {
       enable = true;
       userSettings = {
-        "workbench.colorTheme" = "Palenight (Mild Contrast)";
+        "workbench.colorTheme" = "Catppuccin Macchiato";
         "editor.fontFamily" = "'FiraCode Nerd Font', 'DroidSansMono', monospace";
         "editor.fontLigatures" = true;
         "editor.minimap.enabled" = false;
