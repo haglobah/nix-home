@@ -189,14 +189,14 @@
       ];
       extraConfig = {
         color.ui = "auto";
-        core.sshCommand = "ssh -i ~/.ssh/id_rsa || ssh -i ~/.ssh/id_ed25519";
+        core.sshCommand = "ssh -i ~/.ssh/id_rsa -i ~/.ssh/id_ed25519 2> /dev/null";
         init.defaultBranch = "main";
         rerere.enabled = true;
         branch.sort = "-committerdate";
         url = {
           "https://github.com/" = { insteadOf = "gh:"; };
           "git@github.com:" = { insteadOf = "gs:"; };
-          "git@github.com:haglobah/" = { insteadOf = "me:"; };
+          "git@github.com:haglobah/" = { insteadOf = "my:"; };
           "https://gitlab.com/" = { insteadOf = "gl:"; };
           "ssh://git@gitlab.active-group.de:1022/ag/" = { insteadOf = "ag:"; };
           "git@github.com:active-group/" = { insteadOf = "agh:"; };
