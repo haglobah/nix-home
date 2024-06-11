@@ -189,7 +189,7 @@
       ];
       extraConfig = {
         color.ui = "auto";
-        core.sshCommand = "ssh -i ~/.ssh/id_rsa -F /dev/null";
+        core.sshCommand = "ssh -i ~/.ssh/id_rsa || ssh -i ~/.ssh/id_ed25519";
         init.defaultBranch = "main";
         rerere.enabled = true;
         branch.sort = "-committerdate";
