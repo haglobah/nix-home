@@ -86,7 +86,7 @@
         
         "hm" = "home-manager";
         "hsw" = "home-manager switch --flake .";
-        "reload" = ". ~/.bash_profile";
+        "reload" = ". ~/.config/fish/config.fish";
       };
 
       shellInit = ''
@@ -112,7 +112,7 @@
         end
 
         function gb
-          git for-each-ref --color --sort=-committerdate --format="%{\e[32m%}%(ahead-behind:HEAD)\t%{\e[34m%}%(refname:short)\t%{\e[33m%}%(committerdate:relative)\t%{\e[0m%}%(describe)" refs/ | sed 's/ /\t/' | column --separator='\t' --table --table-columns='Ahead,Behind,Branch Name,Last Commit,Description'
+          git for-each-ref --color --sort=-committerdate --format="%(ahead-behind:HEAD)*%(refname:short)*%(committerdate:relative)*%(describe)" refs/ | column --separator='*' --table --table-columns='Ahead-Behind,Branch Name,Last Commit,Description'
         end
 
         # bind " " expand-abbr or self-insert
