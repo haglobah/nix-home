@@ -231,20 +231,30 @@
       shellIntegration.enableBashIntegration = true;
       shellIntegration.enableFishIntegration = true;
 
-      # settings = {
-      #   shell = "fish";
-      # };
+      settings = {
+        enabled_layouts = "splits:split_axis=horizontal";
+      };
 
       catppuccin.enable = true;
 
       keybindings = {
         "ctrl+t" = "new_tab";
         "ctrl+w" = "close_tab";
-        "ctrl+n" = "new_window";
         "alt+left" = "prev_tab";
         "alt+right" = "next_tab";
         "alt+shift+left" = "move_tab_backward";
         "alt+shift+right" = "next_tab_forward";
+        "ctrl+n" = "new_window";
+        "ctrl+[" = "launch --location=vsplit";
+        "ctrl+]" = "launch --location=hsplit";
+        "shift+left" = "neighboring_window left";
+        "shift+right" = "neighboring_window right";
+        "shift+up" = "neighboring_window up";
+        "shift+down" = "neighboring_window down";
+        "ctrl+shift+left" = "move_window left";
+        "ctrl+shift+right" = "move_window right";
+        "ctrl+shift+up" = "move_window up";
+        "ctrl+shift+down" = "move_window down";
         "ctrl+plus" = "change_font_size all +1.0";
         "ctrl+equal" = "change_font_size all 10.0";
         "ctrl+minus" = "change_font_size all -1.0";
