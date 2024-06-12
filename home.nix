@@ -238,15 +238,15 @@
       catppuccin.enable = true;
 
       keybindings = {
-        "ctrl+t" = "new_tab";
+        "ctrl+t" = "launch --cwd=current --type=tab";
         "ctrl+w" = "close_tab";
         "alt+left" = "prev_tab";
         "alt+right" = "next_tab";
         "alt+shift+left" = "move_tab_backward";
         "alt+shift+right" = "next_tab_forward";
-        "ctrl+n" = "new_window";
-        "ctrl+[" = "launch --location=vsplit";
-        "ctrl+]" = "launch --location=hsplit";
+        "ctrl+n" = "launch --cwd=current";
+        "ctrl+[" = "launch --cwd=current --location=vsplit";
+        "ctrl+]" = "launch --cwd=current --location=hsplit";
         "shift+left" = "neighboring_window left";
         "shift+right" = "neighboring_window right";
         "shift+up" = "neighboring_window up";
