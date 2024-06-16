@@ -117,6 +117,14 @@
           "command" = "workbench.action.focusPreviousGroup";
         }
         {
+          "key" = "ctrl+m";
+          "command" = "magit.status";
+        }
+        {
+          "key" = "alt+x g";
+          "command" = "-magit.status";
+        }
+        {
           "key" = "alt+right";
           "command" = "paredit.sexpRangeExpansion";
           "when" = "calva:keybindingsEnabled && editorTextFocus && !calva:cursorInComment && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
