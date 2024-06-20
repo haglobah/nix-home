@@ -50,6 +50,7 @@
         "mv" = "mv -i";
         "rm" = "rm -i";
         "which" = "type -a";
+        "du" = "du -ach | sort -h";
 
         "grep" = "grep --color=auto";
 
