@@ -77,7 +77,6 @@
         "gca" = "git commit --amend";
         "gcan" = "git commit --amend --no-edit";
         "gacan" = "git add . && git commit --amend --no-edit";
-        "gcl" = "git clone";
         "gd" = "git diff --word-diff";
         "gdl" = "git diff";
         "gst" = "git stash";
@@ -101,6 +100,10 @@
 
         function gap
           git add . && git commit --message="$argv[1]" && git push 
+        end
+
+        function gcl
+          git clone $argv[1] && cd (string split : (basename $argv[1] .git))[-1]
         end
 
         function gm

@@ -46,7 +46,6 @@
         "gca" = "git commit --amend";
         "gcan" = "git commit --amend --no-edit";
         "gacan" = "git add . && git commit --amend --no-edit";
-        "gcl" = "git clone";
         "gd" = "git diff --word-diff";
         "gdl" = "git diff";
         "gst" = "git stash";
@@ -98,6 +97,9 @@
         }
         gm () {
           git add "''${@:2}" && git commit --message="$1"
+        }
+        gcl () {
+          git clone "$1" && cd "$(basename "$1" .git)"
         }
         gmf () {
           git checkout $(git rev-list --topo-order HEAD..''${1:-main})
