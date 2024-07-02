@@ -13,7 +13,6 @@
         "mv" = "mv -i";
         "rm" = "rm -i";
         "wh" = "type -a";
-        "which" = "type -a";
         "du" = "du -ach | sort -h";
 
         "grep" = "grep --color=auto";
