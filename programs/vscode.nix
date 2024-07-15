@@ -35,6 +35,7 @@
           "*.keymap" = "c";
           "*.config" = "clojure";
           "*.env" = "shellscript";
+          "*.tpl" = "html";
         };
       };
       keybindings = [
