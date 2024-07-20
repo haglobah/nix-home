@@ -329,6 +329,8 @@
           ];
         };
 
+        pijul_channel.disabled = false;
+
         # package.disabled = true;
       };
     };
