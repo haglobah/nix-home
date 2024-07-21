@@ -83,6 +83,7 @@
       fd
       emacs29
       neovim
+      zed-editor
 
       chromium
       obsidian
@@ -136,6 +137,9 @@
       ".config/doom/config.el".source = dotfiles/doom/config.el;
       ".config/doom/init.el".source = dotfiles/doom/init.el;
       ".config/doom/packages.el".source = dotfiles/doom/packages.el;
+
+      ".config/zed/settings.json".source = dotfiles/zed/settings.json;
+      ".config/zed/keymap.json".source = dotfiles/zed/keymap.json;
 
       # # You can also set the file content immediately.
       # ".gradle/gradle.properties".text = ''
