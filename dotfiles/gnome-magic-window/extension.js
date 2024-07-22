@@ -40,6 +40,11 @@ const BINDINGS = [
     command: 'code'
   },
   {
+    shortcut: '<Super>z',
+    title: 'Zed',
+    command: 'zed-editor'
+  },
+  {
     shortcut: '<Super>e',
     title: 'Emacs',
     command: 'emacs'
