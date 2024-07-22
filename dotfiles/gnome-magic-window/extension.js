@@ -42,7 +42,7 @@ const BINDINGS = [
   {
     shortcut: '<Super>z',
     title: 'Zed',
-    command: 'zed-editor'
+    command: 'zed'
   },
   {
     shortcut: '<Super>e',
