@@ -298,11 +298,14 @@
         nix-direnv.enable = true;
       };
 
-    catppuccin.flavour = "macchiato";
+    catppuccin = {
+      enable = true;
+      flavor = "macchiato";
+      pointerCursor.enable = true;
+    };
 
     gtk.catppuccin = {
       enable = true;
-      cursor.enable = true;
       icon.enable = true;
     };
 
