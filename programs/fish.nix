@@ -16,6 +16,10 @@
           expansion = "nix shell n#% -c fish";
           setCursor = true;
         };
+        "nsu" = {
+          expansion = "NIXPKGS_ALLOW_UNFREE=1 nix shell n#% --impure -c fish";
+          setCursor = true;
+        };
 
         "nf" = "nix flake";
         "nfc" = "nix flake check";
