@@ -31,7 +31,10 @@
         "nru" = "nix run . --";
         "nl" = "nix run -L . --";
         "nb" = "nix build";
-        "nd" = "nix develop -c fish";
+        "nd" = {
+          expansion = "nix develop % -c fish";
+          setCursor = true;
+        };
 
         "c" = "code . &";
         "gcb" = "git checkout -b";
