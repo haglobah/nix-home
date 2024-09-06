@@ -43,6 +43,11 @@
         "gco" = "git checkout";
         "gme" = "git merge";
 
+        "ghi" = {
+          expansion = "gh repo create % --private --source=. --remote=origin";
+          setCursor = true;
+        }
+
         "da" = "direnv allow";
         "dr" = "direnv reload";
       };
