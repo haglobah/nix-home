@@ -46,7 +46,7 @@
         "ghi" = {
           expansion = "gh repo create % --private --source=. --remote=origin";
           setCursor = true;
-        }
+        };
 
         "da" = "direnv allow";
         "dr" = "direnv reload";
