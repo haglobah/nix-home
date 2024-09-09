@@ -85,6 +85,7 @@
       neovim
       zed-editor
 
+      tor-browser
       chromium
       obsidian
       discord
@@ -92,7 +93,7 @@
       telegram-desktop
       slack
       zoom-us
-      thunderbird      
+      thunderbird
       gnome.gnome-tweaks
 
       # # It is sometimes useful to fine-tune packages, for example, by applying
