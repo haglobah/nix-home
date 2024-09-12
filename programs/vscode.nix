@@ -185,6 +185,16 @@
           "command" = "-paredit.slurpSexpBackward";
           "when" = "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
         }
+        {
+          "key" = "ctrl+k ctrl+backspace";
+          "command" = "paredit.killListBackward";
+          "when" = "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
+        }
+        {
+          "key" = "ctrl+backspace";
+          "command" = "-paredit.killListBackward";
+          "when" = "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
+        }
       ];
     };
   };
