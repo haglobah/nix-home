@@ -195,6 +195,16 @@
           "command" = "-paredit.killListBackward";
           "when" = "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
         }
+        {
+          "key" = "ctrl+k ctrl+delete";
+          "command" = "paredit.killListForward";
+          "when" = "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
+        }
+        {
+          "key" = "ctrl+delete";
+          "command" = "-paredit.killListForward";
+          "when" = "calva:keybindingsEnabled && editorTextFocus && editorLangId == 'clojure' && paredit:keyMap =~ /original|strict/";
+        }
       ];
     };
   };
