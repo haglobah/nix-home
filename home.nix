@@ -85,6 +85,7 @@
       emacs29
       neovim
       zed-editor
+      code-cursor
 
       tor-browser
       chromium
@@ -95,7 +96,7 @@
       slack
       zoom-us
       thunderbird
-      gnome.gnome-tweaks
+      gnome-tweaks
 
       # # It is sometimes useful to fine-tune packages, for example, by applying
       # # overrides. You can do that directly here, just don't forget the
