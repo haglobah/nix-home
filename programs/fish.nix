@@ -27,12 +27,12 @@
         "nfn" = "nix flake new --template";
         "nfs" = "nix flake show";
         "nfu" = "nix flake update";
-        "nr" = "nix run";
+        "nr" = "nix run ";
+        "nra" = "nix run . --";
         "nru" = {
           expansion = "NIXPKGS_ALLOW_UNFREE=1 nix run n#% --impure";
           setCursor = true;
         };
-        "nra" = "nix run . --";
         "nl" = "nix run -L . --";
         "nb" = "nix build";
         "nd" = {
