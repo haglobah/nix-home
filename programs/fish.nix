@@ -51,6 +51,10 @@
           expansion = "gh repo create % --private --source=. --remote=origin";
           setCursor = true;
         };
+        "gho" = {
+          expansion = "gh repo create % --private --source=. --remote=origin && git push --set-upstream origin";
+          setCursor = true;
+        };
 
         "da" = "direnv allow";
         "dr" = "direnv reload";
@@ -70,14 +74,15 @@
 
         "g" = "git";
         "gi" = "git init";
+        "gim" = "git init && git add . && git commit --message \"Initial commit\"";
         "ga" = "git add";
         "gu" = "git restore --staged";
         "gs" = "git status -s -b";
         "gbr" = "git branch -a -v";
         "gl" = "git log --oneline --decorate --graph";
         "gls" = "git log --graph --stat";
-        "gcm" = "git commit -m";
-        "gam" = "git add . && git commit -m";
+        "gcm" = "git commit --message";
+        "gam" = "git add . && git commit --message";
         "gp" = "git push";
         "gpf" = "git push --force-with-lease";
         "gpu" = "git push --set-upstream";
