@@ -4,8 +4,6 @@
     programs.fish = {
       enable = true;
       shellAbbrs = {
-        "gmb" = "git checkout HEAD^";
-
         "n" = "nix";
         "ni" = "nix repl";
         "nix-list" = "nix profile history --profile /nix/var/nix/profiles/system";
@@ -42,8 +40,34 @@
 
         "c" = "cursor . &";
         "co" = "code . &";
+        "e" = "emacs";
+        "h" = "history";
 
+        "g" = "git";
+        "gi" = "git init";
         "gim" = "git init && git add . && git commit --message \"Initial commit\"";
+        "ga" = "git add";
+        "gs" = "git status -s -b";
+        "gbr" = "git branch -a -v";
+        "gcm" = "git commit --message";
+        "gam" = "git add . && git commit --message";
+        "gp" = "git push";
+        "gpf" = "git push --force-with-lease";
+        "gpu" = "git push --set-upstream";
+        "gpo" = "git push --set-upstream origin";
+        "gf" = "git pull";
+        "gfa" = "git fetch --all";
+        "gfap" = "git fetch --all --prune";
+        "gra" = "git remote add";
+        "gro" = "git remote add origin";
+        "grv" = "git remote --verbose";
+        "gca" = "git commit --amend";
+        "gcan" = "git commit --amend --no-edit";
+        "gacan" = "git add . && git commit --amend --no-edit";
+        "gd" = "git diff --word-diff";
+        "gdl" = "git diff";
+        "gst" = "git stash";
+
         "gu" = "git restore --staged";
         "gun" = "git rm --cached";
         "gcb" = "git checkout -b";
@@ -51,8 +75,11 @@
         "gsc" = "git switch -c";
         "gco" = "git checkout";
         "gme" = "git merge";
+        "gmb" = "git checkout HEAD^";
         "gl" = "git log --oneline --decorate --graph";
         "gls" = "git log --graph --stat";
+        "gld" = "git log --graph --pretty=format:'%Cred%h%Creset %an -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative";
+        "gsh" = "git show";
 
         "ghi" = {
           expansion = "gh repo create % --private --source=. --remote=origin";
@@ -73,7 +100,6 @@
       shellAliases = {
         ".." = "cd ..";
         "cp" = "cp -i";
-        "h" = "history";
         "l" = "lla";
         "lta" = "lt -la";
         "mv" = "mv -i";
@@ -82,32 +108,6 @@
         "du" = "du -ach | sort -h";
 
         "grep" = "grep --color=auto";
-
-        "g" = "git";
-        "gi" = "git init";
-        "ga" = "git add";
-        "gs" = "git status -s -b";
-        "gbr" = "git branch -a -v";
-        "gcm" = "git commit --message";
-        "gam" = "git add . && git commit --message";
-        "gp" = "git push";
-        "gpf" = "git push --force-with-lease";
-        "gpu" = "git push --set-upstream";
-        "gpo" = "git push --set-upstream origin";
-        "gf" = "git pull";
-        "gF" = "git fetch";
-        "gra" = "git remote add";
-        "gro" = "git remote add origin";
-        "grv" = "git remote --verbose";
-        "gca" = "git commit --amend";
-        "gcan" = "git commit --amend --no-edit";
-        "gacan" = "git add . && git commit --amend --no-edit";
-        "gd" = "git diff --word-diff";
-        "gdl" = "git diff";
-        "gst" = "git stash";
-        "gsh" = "git show";
-
-        "e" = "emacs";
       };
 
       shellInit = ''
