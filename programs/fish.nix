@@ -59,7 +59,7 @@
           setCursor = true;
         };
         "gho" = {
-          expansion = "gh repo create % --private --source=. --remote=origin && git push --set-upstream origin";
+          expansion = "gh repo create % --private --source=. --remote=origin && git push --set-upstream origin main";
           setCursor = true;
         };
 
