@@ -40,7 +40,8 @@
           setCursor = true;
         };
 
-        "c" = "code . &";
+        "c" = "cursor . &";
+        "co" = "code . &";
         "gcb" = "git checkout -b";
         "gsw" = "git switch";
         "gsc" = "git switch -c";
