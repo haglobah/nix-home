@@ -42,11 +42,17 @@
 
         "c" = "cursor . &";
         "co" = "code . &";
+
+        "gim" = "git init && git add . && git commit --message \"Initial commit\"";
+        "gu" = "git restore --staged";
+        "gun" = "git rm --cached";
         "gcb" = "git checkout -b";
         "gsw" = "git switch";
         "gsc" = "git switch -c";
         "gco" = "git checkout";
         "gme" = "git merge";
+        "gl" = "git log --oneline --decorate --graph";
+        "gls" = "git log --graph --stat";
 
         "ghi" = {
           expansion = "gh repo create % --private --source=. --remote=origin";
@@ -59,6 +65,10 @@
 
         "da" = "direnv allow";
         "dr" = "direnv reload";
+
+        "hm" = "home-manager";
+        "hsw" = "home-manager switch --flake .";
+        "reload" = "source ~/.config/fish/config.fish";
       };
       shellAliases = {
         ".." = "cd ..";
@@ -75,13 +85,9 @@
 
         "g" = "git";
         "gi" = "git init";
-        "gim" = "git init && git add . && git commit --message \"Initial commit\"";
         "ga" = "git add";
-        "gu" = "git restore --staged";
         "gs" = "git status -s -b";
         "gbr" = "git branch -a -v";
-        "gl" = "git log --oneline --decorate --graph";
-        "gls" = "git log --graph --stat";
         "gcm" = "git commit --message";
         "gam" = "git add . && git commit --message";
         "gp" = "git push";
@@ -90,7 +96,6 @@
         "gpo" = "git push --set-upstream origin";
         "gf" = "git pull";
         "gF" = "git fetch";
-        "gun" = "git rm --cached";
         "gra" = "git remote add";
         "gro" = "git remote add origin";
         "grv" = "git remote --verbose";
@@ -103,10 +108,6 @@
         "gsh" = "git show";
 
         "e" = "emacs";
-        
-        "hm" = "home-manager";
-        "hsw" = "home-manager switch --flake .";
-        "reload" = ". ~/.config/fish/config.fish";
       };
 
       shellInit = ''
