@@ -65,7 +65,6 @@
         "gcan" = "git commit --amend --no-edit";
         "gacan" = "git add . && git commit --amend --no-edit";
         "gd" = "git diff --word-diff";
-        "gdl" = "git log --graph --pretty=format:'%Cred%h%Creset %an -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative";
         "gst" = "git stash";
 
         "gu" = "git restore --staged";
