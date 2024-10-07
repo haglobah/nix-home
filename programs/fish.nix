@@ -65,7 +65,7 @@
         "gcan" = "git commit --amend --no-edit";
         "gacan" = "git add . && git commit --amend --no-edit";
         "gd" = "git diff --word-diff";
-        "gdl" = "git diff";
+        "gdl" = "git log --graph --pretty=format:'%Cred%h%Creset %an -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative";
         "gst" = "git stash";
 
         "gu" = "git restore --staged";
@@ -137,7 +137,7 @@
         end
 
         function gb
-          git for-each-ref --color --sort=-committerdate --format="%(ahead-behind:HEAD)*%(refname:short)*%(committerdate:relative)*%(describe)" refs/ | column --separator='*' --table --table-columns='Ahead-Behind,Branch Name,Last Commit,Description'
+          git for-each-ref --color --sort=-committerdate --format='%(color:green)%(ahead-behind:HEAD)%(color:reset)*%(color:blue)%(refname:short)%(color:reset)*%(color:yellow)%(committerdate:relative)%(color:reset)*%(describe)' refs/ | column --separator='*' --table --table-columns='Ahead-Behind,Branch Name,Last Commit,Description'
         end
 
         # bind " " expand-abbr or self-insert
