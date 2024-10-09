@@ -378,5 +378,8 @@
       enableBashIntegration = true;
       enableFishIntegration = true;
     };
+    programs.broot = {
+      enable = true;
+    };
   };
 }
