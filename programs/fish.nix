@@ -55,6 +55,7 @@
         "gpf" = "git push --force-with-lease";
         "gpu" = "git push --set-upstream";
         "gpo" = "git push --set-upstream origin";
+        "gpb" = "git push --set-upstream origin (git_branch_name)";
         "gf" = "git pull";
         "gfa" = "git fetch --all";
         "gfap" = "git fetch --all --prune";
@@ -133,6 +134,10 @@
 
         function gmf
           git checkout (git rev-list --topo-order HEAD..''$argv[1] | string collect; or echo)
+        end
+
+        function git_branch_name
+          git rev-parse --abbrev-ref HEAD
         end
 
         function gb
