@@ -148,7 +148,7 @@
 
         set -gx PATH $PATH ~/.config/emacs/bin"
         set -gx PATH $PATH ~/.emacs.d/bin"
-        set -gx EDITOR "emacs"
+        set -gx EDITOR "nvim"
       '';
     };
   };

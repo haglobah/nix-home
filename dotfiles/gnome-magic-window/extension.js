@@ -36,13 +36,13 @@ const BINDINGS = [
   },
   {
     shortcut: '<Super>c',
-    title: 'Cursor',
-    command: 'cursor'
+    title: 'Code',
+    command: 'code'
   },
   {
     shortcut: '<Super>x',
-    title: 'Code',
-    command: 'code'
+    title: 'Cursor',
+    command: 'cursor'
   },
   {
     shortcut: '<Super>z',
