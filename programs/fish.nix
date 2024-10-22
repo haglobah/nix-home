@@ -38,8 +38,8 @@
           setCursor = true;
         };
 
-        "c" = "cursor . &";
-        "co" = "code . &";
+        "cu" = "cursor . &";
+        "c" = "code . &";
         "e" = "emacs";
         "h" = "history";
 
