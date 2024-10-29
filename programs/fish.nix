@@ -68,6 +68,7 @@
         "gd" = "git diff --word-diff";
         "gst" = "git stash";
 
+        "gre" = "git restore";
         "gu" = "git restore --staged";
         "gun" = "git rm --cached";
         "gcb" = "git checkout -b";
