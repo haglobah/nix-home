@@ -198,6 +198,7 @@
         color.ui = "auto";
         core.sshCommand = "ssh -i ~/.ssh/id_rsa -i ~/.ssh/id_ed25519 2> /dev/null";
         init.defaultBranch = "main";
+        checkout.defaultRemote = "origin";
         rerere.enabled = true;
         branch.sort = "-committerdate";
         url = {
