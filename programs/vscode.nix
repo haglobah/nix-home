@@ -25,6 +25,9 @@
           "editorBracketHighlight.unexpectedBracket.foreground" = "#db6165";
         };
         "files.autoSave" = "onFocusChange";
+        "files.exclude" = {
+          "**/.direnv" = true;
+        };
         "editor.tabSize" = 2;
         "direnv.restart.automatic" = true;
         "terminal.integrated.enableMultiLinePasteWarning" = false;
