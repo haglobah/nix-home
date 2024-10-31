@@ -90,6 +90,7 @@
       tor-browser
       chromium
       obsidian
+      anytype
       discord
       signal-desktop
       telegram-desktop
