@@ -60,6 +60,11 @@ const BINDINGS = [
     command: 'obsidian'
   },
   {
+    shortcut: '<Super>y',
+    title: 'Anytype',
+    command: 'anytype'
+  },
+  {
     shortcut: '<Super>s',
     title: 'Signal',
     command: 'signal-desktop'
