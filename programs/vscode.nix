@@ -28,6 +28,7 @@
         "files.exclude" = {
           "**/.direnv" = true;
         };
+        "files.insertFinalNewline" = true;
         "editor.tabSize" = 2;
         "direnv.restart.automatic" = true;
         "terminal.integrated.enableMultiLinePasteWarning" = false;
