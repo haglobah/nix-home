@@ -88,6 +88,15 @@
           "command" = "explorer.newFile";
         }
         {
+          "key" = "ctrl+f";
+          "command" = "-actions.find";
+          "when" = "editorFocus || editorIsOpen";
+        }
+        {
+          "key" = "ctrl+f";
+          "command" = "workbench.action.quickTextSearch";
+        }
+        {
           "key" = "ctrl+,";
           "command" = "editor.action.quickFix";
           "when" = "editorHasCodeActionsProvider && textInputFocus && !editorReadonly";
