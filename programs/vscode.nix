@@ -30,6 +30,7 @@
         };
         "files.insertFinalNewline" = true;
         "editor.tabSize" = 2;
+        "editor.detectIndentation" = false;
         "direnv.restart.automatic" = true;
         "terminal.integrated.enableMultiLinePasteWarning" = false;
         "explorer.confirmDelete" = false;
