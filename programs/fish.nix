@@ -73,6 +73,7 @@
         "gun" = "git rm --cached";
         "gcb" = "git checkout -b";
         "gsw" = "git switch";
+        "gs-" = "git switch -";
         "gsc" = "git switch -c";
         "gco" = "git checkout";
         "gme" = "git merge";
