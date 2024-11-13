@@ -46,6 +46,7 @@
         "g" = "git";
         "gi" = "git init";
         "gim" = "git init && git add . && git commit --message \"Initial commit\"";
+        "gcl" = "git clone";
         "ga" = "git add";
         "gs" = "git status -s -b";
         "gbr" = "git branch -a -v";
@@ -125,7 +126,7 @@
           git add . && git commit --message="$argv[1]" && git push 
         end
 
-        function gcl
+        function gc
           git clone $argv[1] && cd (string split : (basename $argv[1] .git))[-1]
         end
 
