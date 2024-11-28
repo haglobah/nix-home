@@ -262,7 +262,6 @@
         "alt+right" = "next_tab";
         "alt+shift+left" = "move_tab_backward";
         "alt+shift+right" = "next_tab_forward";
-        "ctrl+n" = "launch --cwd=current";
         "ctrl+[" = "launch --cwd=current --location=vsplit";
         "ctrl+]" = "launch --cwd=current --location=hsplit";
         "shift+left" = "neighboring_window left";
