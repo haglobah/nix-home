@@ -85,7 +85,7 @@
       emacs29
       neovim
       zed-editor
-      code-cursor
+      keepassxc
 
       tor-browser
       chromium
