@@ -3,7 +3,7 @@
     "bindings": {
       "ctrl-.": [
         "workspace::SendKeystrokes", "ctrl-shift-p"
-      ],
+      ]
     }
   }
 ]
