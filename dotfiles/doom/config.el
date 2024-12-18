@@ -49,12 +49,18 @@
   (setq why-this-idle-delay 0.01)
   (global-why-this-mode))
 
-(after! super-save
-  (super-save-mode +1)
-  (setq auto-save-default nil)
-  (setq auto-save-remote-files nil)
-  (setq super-save-silent t)
-  (setq super-save-all-buffers t))
+(add-hook! 'focus-out (save-buffer))
+(add-hook! 'find-file-hook (save-buffer))
+(add-hook! 'switch-to-buffer (save-buffer))
+
+;; (after! super-save
+;;   (super-save-mode +1)
+;;   (add-to-list 'super-save-triggers 'ace-window 'switch-to-buffer)
+;;   (add-to-list 'super-save-hook-triggers 'find-file-hook 'focus-out)
+;;   (setq auto-save-default nil)
+;;   (setq auto-save-remote-files nil)
+;;   (setq super-save-silent t)
+;;   (setq super-save-all-buffers t))
 
 (evil-set-initial-state 'magit 'emacs)
 
