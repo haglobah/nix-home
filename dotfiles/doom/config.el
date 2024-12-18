@@ -41,12 +41,13 @@
 (setq which-key-idle-delay 0.2)
 (setq shell-file-name (executable-find "bash"))
 
-(global-why-this-mode)
-
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
+(after! why-this
+  (setq why-this-idle-delay 0.001)
+  (global-why-this-mode))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
