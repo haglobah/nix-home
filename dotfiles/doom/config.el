@@ -46,8 +46,16 @@
 (setq org-directory "~/org/")
 
 (after! why-this
-  (setq why-this-idle-delay 0.001)
+  (setq why-this-idle-delay 0.01)
   (global-why-this-mode))
+
+(after! super-save
+  (super-save-mode +1)
+  (setq super-save-auto-save-when-idle t)
+  (setq auto-save-default nil)
+  (setq auto-save-remote-files nil)
+  (setq super-save-silent t)
+  (setq super-save-all-buffers t))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
