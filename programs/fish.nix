@@ -85,7 +85,7 @@
         "gmb" = "git checkout HEAD^";
         "gl" = "git log --oneline --decorate --graph";
         "gls" = "git log --graph --stat";
-        "gld" = "git log --graph --pretty=format:'%Cred%h%Creset %an -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative";
+        "gld" = "git -c color.ui=always log --graph --pretty=format:'%C(yellow)%h%C(auto) %d %s}%C(green)%cr%C(reset) | %C(blue)%an%C(reset)' --abbrev-commit --date=relative | column --separator '}' --table | less";
         "gsh" = "git show";
 
         "ghi" = {
