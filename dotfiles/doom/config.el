@@ -56,6 +56,20 @@
   (setq super-save-silent t)
   (setq super-save-all-buffers t))
 
+(evil-set-initial-state 'magit 'emacs)
+
+(map! :i "C-u" nil)
+(map! "C-u" nil)
+
+;; (define-key global-map (kbd "C-S-u") 'read-unicode-char)
+
+(defun read-unicode-char (c1 c2 c3 c4 _trailing_space_ignored)
+  "Convert unicode input C1 C2 C3 C4 to the corresponding insert char call."
+  (interactive "c\nc\nc\nc\nc")
+  (insert-char (string-to-number (format "%c%c%c%c" c1 c2 c3 c4) 16)))
+
+(map! "C-S-u" 'read-unicode-char)
+
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
 ;;
