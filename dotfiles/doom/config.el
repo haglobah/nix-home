@@ -51,15 +51,6 @@
 
 (auto-save-visited-mode)
 
-;; (after! super-save
-;;   (super-save-mode +1)
-;;   (add-to-list 'super-save-triggers 'ace-window 'switch-to-buffer)
-;;   (add-to-list 'super-save-hook-triggers 'find-file-hook 'focus-out)
-;;   (setq auto-save-default nil)
-;;   (setq auto-save-remote-files nil)
-;;   (setq super-save-silent t)
-;;   (setq super-save-all-buffers t))
-
 (evil-set-initial-state 'magit 'emacs)
 
 (map! :i "C-u" nil)
