@@ -64,8 +64,11 @@
 (map! :nv "M-." (lambda () (interactive) (affe-find "~")))
 
 (after! why-this
-  (setq why-this-idle-delay 0.01)
+  (setq! why-this-idle-delay 0.01)
   (global-why-this-mode t))
+
+(after! treemacs
+  (setq! treemacs-file-event-delay 100))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
