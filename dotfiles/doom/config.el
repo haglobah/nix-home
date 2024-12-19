@@ -49,9 +49,7 @@
   (setq why-this-idle-delay 0.01)
   (global-why-this-mode))
 
-(add-hook! 'focus-out (save-buffer))
-(add-hook! 'find-file-hook (save-buffer))
-(add-hook! 'switch-to-buffer (save-buffer))
+(auto-save-visited-mode)
 
 ;; (after! super-save
 ;;   (super-save-mode +1)
@@ -65,9 +63,6 @@
 (evil-set-initial-state 'magit 'emacs)
 
 (map! :i "C-u" nil)
-(map! "C-u" nil)
-
-;; (define-key global-map (kbd "C-S-u") 'read-unicode-char)
 
 (defun read-unicode-char (c1 c2 c3 c4 _trailing_space_ignored)
   "Convert unicode input C1 C2 C3 C4 to the corresponding insert char call."
