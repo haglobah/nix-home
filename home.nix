@@ -257,7 +257,6 @@
 
       keybindings = {
         "ctrl+t" = "launch --cwd=current --type=tab";
-        "ctrl+w" = "close_tab";
         "alt+left" = "prev_tab";
         "alt+right" = "next_tab";
         "alt+shift+left" = "move_tab_backward";
