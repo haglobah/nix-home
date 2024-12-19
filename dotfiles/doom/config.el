@@ -45,8 +45,8 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
-(auto-save-visited-mode t)
 (setq auto-save-visited-interval 0.1)
+(auto-save-visited-mode t)
 
 (global-auto-revert-mode t)
 
