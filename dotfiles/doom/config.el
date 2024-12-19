@@ -61,11 +61,11 @@
 
 (map! "C-S-u" 'read-unicode-char)
 
+(map! :nv "M-." (lambda () (interactive) (affe-find "~")))
+
 (after! why-this
   (setq why-this-idle-delay 0.01)
-  (global-why-this-mode))
-
-(map! :nv "M-." (lambda () (interactive) (affe-find "~")))
+  (global-why-this-mode t))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
