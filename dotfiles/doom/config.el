@@ -50,6 +50,9 @@
   (global-why-this-mode))
 
 (auto-save-visited-mode)
+(setq auto-save-visited-interval 0.1)
+
+(global-auto-revert-mode t)
 
 (evil-set-initial-state 'magit 'emacs)
 
