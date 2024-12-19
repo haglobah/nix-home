@@ -45,11 +45,7 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
-(after! why-this
-  (setq why-this-idle-delay 0.01)
-  (global-why-this-mode))
-
-(auto-save-visited-mode)
+(auto-save-visited-mode t)
 (setq auto-save-visited-interval 0.1)
 
 (global-auto-revert-mode t)
@@ -64,6 +60,12 @@
   (insert-char (string-to-number (format "%c%c%c%c" c1 c2 c3 c4) 16)))
 
 (map! "C-S-u" 'read-unicode-char)
+
+(after! why-this
+  (setq why-this-idle-delay 0.01)
+  (global-why-this-mode))
+
+(map! :nv "M-." (lambda () (interactive) (affe-find "~")))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
