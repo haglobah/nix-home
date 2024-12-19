@@ -153,8 +153,7 @@
 
         # bind " " expand-abbr or self-insert
 
-        set -gx PATH $PATH ~/.config/emacs/bin"
-        set -gx PATH $PATH ~/.emacs.d/bin"
+        set -gx PATH $PATH "/home/beat/.config/emacs/bin"
         set -gx EDITOR "nvim"
       '';
     };
