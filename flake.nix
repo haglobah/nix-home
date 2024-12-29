@@ -39,9 +39,14 @@
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    ghostty = {
+      url = "github:ghostty-org/ghostty";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, nix-index-database, alles, agenix, ... }@inputs:
+  outputs = { nixpkgs, home-manager, nix-index-database, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -58,8 +63,9 @@
           inputs.catppuccin.homeManagerModules.catppuccin
           {
             home.packages = [
-              alles.packages.${system}.default
-              agenix.packages.${system}.default
+              inputs.alles.packages.${system}.default
+              inputs.agenix.packages.${system}.default
+              inputs.ghostty.packages.${system}.default
             ];
           }
         ];

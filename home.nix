@@ -86,6 +86,8 @@
       neovim
       zed-editor
       keepassxc
+      zig
+      lua
 
       tor-browser
       chromium
