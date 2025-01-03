@@ -926,6 +926,15 @@ require('lazy').setup({
       'nvim-telescope/telescope.nvim', -- optional
     },
     config = true
+  },
+  {
+    "Pocco81/auto-save.nvim",
+    config = function()
+       require("auto-save").setup {
+        -- your config goes here
+        -- or just leave it empty :)
+       }
+    end,
   }
 
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
