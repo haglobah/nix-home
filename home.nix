@@ -83,11 +83,15 @@
       ripgrep
       fd
       emacs29
-      neovim
       zed-editor
       keepassxc
+      
+      neovim
       zig
+      gcc
       lua
+      unzip
+      gnumake
 
       tor-browser
       chromium
