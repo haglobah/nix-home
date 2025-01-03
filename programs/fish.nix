@@ -44,6 +44,7 @@
 
         "cu" = "cursor . &";
         "c" = "code . &";
+        "v" = "nvim .";
         "e" = "emacs";
         "h" = "history";
 
