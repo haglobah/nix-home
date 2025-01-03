@@ -147,6 +147,8 @@
       ".config/zed/settings.json".source = dotfiles/zed/settings.json;
       ".config/zed/keymap.json".source = dotfiles/zed/keymap.json;
 
+      ".config/nvim/init.lua".source = dotfiles/nvim/init.lua;
+
       # # You can also set the file content immediately.
       # ".gradle/gradle.properties".text = ''
       #   org.gradle.console=verbose
