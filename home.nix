@@ -259,16 +259,14 @@
         enabled_layouts = "splits:split_axis=horizontal";
       };
 
-      catppuccin.enable = true;
-
       keybindings = {
         "ctrl+t" = "launch --cwd=current --type=tab";
         "alt+left" = "prev_tab";
         "alt+right" = "next_tab";
         "alt+shift+left" = "move_tab_backward";
         "alt+shift+right" = "next_tab_forward";
-        "ctrl+[" = "launch --cwd=current --location=vsplit";
-        "ctrl+]" = "launch --cwd=current --location=hsplit";
+        "ctrl+]" = "launch --cwd=current --location=vsplit";
+        "ctrl+[" = "launch --cwd=current --location=hsplit";
         "shift+left" = "neighboring_window left";
         "shift+right" = "neighboring_window right";
         "shift+up" = "neighboring_window up";
@@ -319,12 +317,13 @@
     catppuccin = {
       enable = true;
       flavor = "macchiato";
-      pointerCursor.enable = true;
-    };
-
-    gtk.catppuccin = {
-      enable = true;
-      icon.enable = true;
+      starship.enable = true;
+      kitty.enable = true;
+      gtk.icon.enable = true;
+      gtk.enable = true;
+      fzf.enable = true;
+      bat.enable = true;
+      cursors.enable = true;
     };
 
     programs.starship = {
@@ -333,7 +332,6 @@
       enableBashIntegration = true;
       enableFishIntegration = true;
 
-      catppuccin.enable = true;
       # Configuration written to ~/.config/starship.toml
       settings = {
         add_newline = false;
@@ -365,7 +363,6 @@
     };
     programs.bat = {
       enable = true;
-      catppuccin.enable = true;
     };
     programs.eza = {
       enable = true;
@@ -380,7 +377,6 @@
     };
     programs.fzf = {
       enable = true;
-      catppuccin.enable = true;
       enableBashIntegration = true;
       enableFishIntegration = true;
     };
