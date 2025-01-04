@@ -92,6 +92,7 @@
       lua
       unzip
       gnumake
+      markdownlint-cli
 
       tor-browser
       chromium
