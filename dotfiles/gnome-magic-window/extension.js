@@ -41,8 +41,8 @@ const BINDINGS = [
   },
   {
     shortcut: '<Super>x',
-    title: 'Cursor',
-    command: 'cursor'
+    title: 'Ghostty',
+    command: 'ghostty'
   },
   {
     shortcut: '<Super>z',
