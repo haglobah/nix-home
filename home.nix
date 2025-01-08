@@ -1,6 +1,9 @@
-{ config, pkgs, inputs, ... }:
 {
-
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     ./programs/vscode.nix
     ./programs/bash.nix
@@ -24,7 +27,7 @@
 
     nixpkgs.config = {
       allowUnfree = true;
-      allowUnfreePredicate = (_: true);
+      allowUnfreePredicate = _: true;
       # permittedInsecurePackages = [
       #   "electron-25.9.0"
       # ];
@@ -85,7 +88,7 @@
       emacs29
       zed-editor
       keepassxc
-      
+
       neovim
       zig
       gcc
@@ -127,7 +130,7 @@
 
       "org/gnome/shell" = {
         disable-user-extensions = false;
-        
+
         enabled-extensions = [
           "gnome-magic-window@adrienverge"
         ];
@@ -186,10 +189,12 @@
       enable = true;
       userEmail = "bah@posteo.de";
       userName = "Beat Hagenlocher";
-      includes = [{
-        condition = "gitdir:~/ag/";
-        contents = { user.email = "beat.hagenlocher@active-group.de"; };
-      }];
+      includes = [
+        {
+          condition = "gitdir:~/ag/";
+          contents = {user.email = "beat.hagenlocher@active-group.de";};
+        }
+      ];
       ignores = [
         ".envrc"
         ".direnv/"
@@ -210,12 +215,12 @@
         rerere.enabled = true;
         branch.sort = "-committerdate";
         url = {
-          "https://github.com/" = { insteadOf = "gh:"; };
-          "git@github.com:" = { insteadOf = "gs:"; };
-          "git@github.com:haglobah/" = { insteadOf = "my:"; };
-          "https://gitlab.com/" = { insteadOf = "gl:"; };
-          "ssh://git@gitlab.active-group.de:1022/ag/" = { insteadOf = "ag:"; };
-          "git@github.com:active-group/" = { insteadOf = "agh:"; };
+          "https://github.com/" = {insteadOf = "gh:";};
+          "git@github.com:" = {insteadOf = "gs:";};
+          "git@github.com:haglobah/" = {insteadOf = "my:";};
+          "https://gitlab.com/" = {insteadOf = "gl:";};
+          "ssh://git@gitlab.active-group.de:1022/ag/" = {insteadOf = "ag:";};
+          "git@github.com:active-group/" = {insteadOf = "agh:";};
         };
       };
     };
@@ -287,7 +292,6 @@
     programs.firefox = {
       enable = true;
       profiles.beat = {
-
         settings = {
           "signon.rememberSignons" = false;
           "layout.spellcheckDefault" = "0";
@@ -310,10 +314,10 @@
     };
 
     programs.direnv = {
-        enable = true;
-        enableBashIntegration = true; # see note on other shells below
-        nix-direnv.enable = true;
-      };
+      enable = true;
+      enableBashIntegration = true; # see note on other shells below
+      nix-direnv.enable = true;
+    };
 
     catppuccin = {
       enable = true;
@@ -349,7 +353,10 @@
 
         battery = {
           display = [
-            {threshold = 30; style = "bold red";}
+            {
+              threshold = 30;
+              style = "bold red";
+            }
           ];
         };
 
