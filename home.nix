@@ -6,6 +6,7 @@
 }: {
   imports = [
     ./programs/vscode.nix
+    ./programs/nvf.nix
     ./programs/bash.nix
     ./programs/fish.nix
   ];

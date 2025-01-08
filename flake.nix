@@ -43,9 +43,17 @@
     ghostty = {
       url = "github:ghostty-org/ghostty";
     };
+
+    nvf = {
+      url = "github:notashelf/nvf";
+      # You can override the input nixpkgs to follow your system's
+      # instance of nixpkgs. This is safe to do as nvf does not depend
+      # on a binary cache.
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, nix-index-database, ... }@inputs:
+  outputs = { nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
@@ -58,7 +66,8 @@
         # the path to your home.nix.
         modules = [ 
           ./home.nix
-          nix-index-database.hmModules.nix-index
+          inputs.nix-index-database.hmModules.nix-index
+          inputs.nvf.homeManagerModules.default
           inputs.catppuccin.homeManagerModules.catppuccin
           {
             home.packages = [
