@@ -149,9 +149,9 @@
       ".local/share/gnome-shell/extensions/gnome-magic-window@adrienverge/extension.js".source = dotfiles/gnome-magic-window/extension.js;
       ".local/share/gnome-shell/extensions/gnome-magic-window@adrienverge/metadata.json".source = dotfiles/gnome-magic-window/metadata.json;
 
-      ".config/doom/config.el".source = dotfiles/doom/config.el;
-      ".config/doom/init.el".source = dotfiles/doom/init.el;
-      ".config/doom/packages.el".source = dotfiles/doom/packages.el;
+      # ".config/doom/config.el".source = dotfiles/doom/config.el;
+      # ".config/doom/init.el".source = dotfiles/doom/init.el;
+      # ".config/doom/packages.el".source = dotfiles/doom/packages.el;
 
       ".config/zed/settings.json".source = dotfiles/zed/settings.json;
       ".config/zed/keymap.json".source = dotfiles/zed/keymap.json;
