@@ -174,7 +174,7 @@
     #
     # if you don't want to manage your shell through Home Manager.
     home.sessionVariables = {
-      # EDITOR = "emacs";
+      GNOME_SHELL_SLOWDOWN_FACTOR = 0.25;
     };
 
     services.emacs.enable = true;
