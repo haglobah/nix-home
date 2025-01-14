@@ -84,11 +84,11 @@
       cachix
       ydotool
       wl-clipboard
+
+      emacs29
       ripgrep
       fd
-      emacs29
-      zed-editor
-      keepassxc
+      python314
 
       neovim
       zig
@@ -98,6 +98,8 @@
       gnumake
       markdownlint-cli
 
+      zed-editor
+      keepassxc
       tor-browser
       chromium
       obsidian
