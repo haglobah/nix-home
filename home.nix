@@ -89,6 +89,7 @@
       ripgrep
       fd
       python314
+      aider-chat
 
       neovim
       zig
