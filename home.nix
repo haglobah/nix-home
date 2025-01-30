@@ -5,6 +5,9 @@
   ...
 }: {
   imports = [
+    ./modules/registry.nix
+
+    ./programs/git.nix
     ./programs/vscode.nix
     ./programs/nvf.nix
     ./programs/bash.nix
@@ -12,6 +15,14 @@
   ];
 
   config = {
+    nixpkgs.config = {
+      allowUnfree = true;
+      allowUnfreePredicate = _: true;
+      # permittedInsecurePackages = [
+      #   "electron-25.9.0"
+      # ];
+    };
+
     # Home Manager needs a bit of information about you and the paths it should
     # manage.
     home.username = "beat";
@@ -26,57 +37,7 @@
     # release notes.
     home.stateVersion = "22.11"; # Please read the comment before changing.
 
-    nixpkgs.config = {
-      allowUnfree = true;
-      allowUnfreePredicate = _: true;
-      # permittedInsecurePackages = [
-      #   "electron-25.9.0"
-      # ];
-    };
-
-    nix.registry = {
-      my = {
-        from = {
-          id = "my";
-          type = "indirect";
-        };
-        to = {
-          owner = "haglobah";
-          repo = "flakes";
-          type = "github";
-        };
-      };
-      n = {
-        from = {
-          id = "n";
-          type = "indirect";
-        };
-        to = {
-          type = "tarball";
-          url = "https://flakehub.com/f/DeterminateSystems/nixpkgs-weekly/*.tar.gz";
-        };
-      };
-      nu = {
-        from = {
-          id = "nu";
-          type = "indirect";
-        };
-        to = {
-          type = "github";
-          owner = "nixos";
-          repo = "nixpkgs";
-          ref = "nixos-unstable";
-        };
-      };
-      this.flake = inputs.nixpkgs;
-    };
-
-    # The home.packages option allows you to install Nix packages into your
-    # environment.
     home.packages = with pkgs; [
-      # # Adds the 'hello' command to your environment. It prints a friendly
-      # # "Hello, world!" when run.
-      # pkgs.hello
       wget
       curl
       jq
@@ -127,34 +88,9 @@
       # '')
     ];
 
-    dconf.settings = {
-      "org/gnome/desktop/interface" = {
-        color-scheme = "prefer-dark";
-      };
-
-      "org/gnome/shell" = {
-        disable-user-extensions = false;
-
-        enabled-extensions = [
-          "gnome-magic-window@adrienverge"
-        ];
-      };
-    };
-
-    # Home Manager is pretty good at managing dotfiles. The primary way to manage
-    # plain files is through 'home.file'.
     home.file = {
-      # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-      # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-      # # symlink to the Nix store copy.
-      # ".screenrc".source = dotfiles/screenrc;
-
       ".local/share/gnome-shell/extensions/gnome-magic-window@adrienverge/extension.js".source = dotfiles/gnome-magic-window/extension.js;
       ".local/share/gnome-shell/extensions/gnome-magic-window@adrienverge/metadata.json".source = dotfiles/gnome-magic-window/metadata.json;
-
-      # ".config/doom/config.el".source = dotfiles/doom/config.el;
-      # ".config/doom/init.el".source = dotfiles/doom/init.el;
-      # ".config/doom/packages.el".source = dotfiles/doom/packages.el;
 
       ".config/zed/settings.json".source = dotfiles/zed/settings.json;
       ".config/zed/keymap.json".source = dotfiles/zed/keymap.json;
@@ -180,54 +116,32 @@
       GNOME_SHELL_SLOWDOWN_FACTOR = 0.4;
     };
 
-    services.emacs.enable = true;
-
-    # programs.eww = {
-    #   enable = true;
-    # };
-
-    # Let Home Manager install and manage itself.
-    programs.home-manager.enable = true;
-
-    programs.git = {
+    xdg.enable = true;
+    xdg.autostart = {
       enable = true;
-      userEmail = "bah@posteo.de";
-      userName = "Beat Hagenlocher";
-      includes = [
-        {
-          condition = "gitdir:~/ag/";
-          contents = {user.email = "beat.hagenlocher@active-group.de";};
-        }
+      entries = [
+        "${pkgs.linphone}/share/applications/linphone.desktop"
       ];
-      ignores = [
-        ".envrc"
-        ".direnv/"
+    };
 
-        ".calva"
+    dconf.settings = {
+      "org/gnome/desktop/interface" = {
+        color-scheme = "prefer-dark";
+      };
 
-        # Emacs
-        "*~"
-        "\\#*\\#"
-        ".\\#*"
-        ".dir-locals.el"
-      ];
-      extraConfig = {
-        color.ui = "auto";
-        core.sshCommand = "ssh -i ~/.ssh/id_rsa -i ~/.ssh/id_ed25519 2> /dev/null";
-        init.defaultBranch = "main";
-        checkout.defaultRemote = "origin";
-        rerere.enabled = true;
-        branch.sort = "-committerdate";
-        url = {
-          "https://github.com/" = {insteadOf = "gh:";};
-          "git@github.com:" = {insteadOf = "gs:";};
-          "git@github.com:haglobah/" = {insteadOf = "my:";};
-          "https://gitlab.com/" = {insteadOf = "gl:";};
-          "ssh://git@gitlab.active-group.de:1022/ag/" = {insteadOf = "ag:";};
-          "git@github.com:active-group/" = {insteadOf = "agh:";};
-        };
+      "org/gnome/shell" = {
+        disable-user-extensions = false;
+
+        enabled-extensions = [
+          "gnome-magic-window@adrienverge"
+          # "unite"
+        ];
       };
     };
+
+    services.emacs.enable = true;
+
+    programs.home-manager.enable = true;
 
     programs.gh = {
       enable = true;
