@@ -134,7 +134,6 @@
 
         enabled-extensions = [
           "gnome-magic-window@adrienverge"
-          # "unite"
         ];
       };
     };

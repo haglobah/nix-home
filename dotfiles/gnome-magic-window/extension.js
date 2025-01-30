@@ -61,8 +61,8 @@ const BINDINGS = [
   },
   {
     shortcut: '<Super>y',
-    title: 'Anytype',
-    command: 'anytype'
+    title: 'Linphone',
+    command: 'linphone'
   },
   {
     shortcut: '<Super>s',
