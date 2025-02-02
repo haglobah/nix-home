@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ...}:
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   config = {
     programs.fish = {
       enable = true;
@@ -57,6 +61,7 @@
         "gbr" = "git branch -a -v";
         "gcm" = "git commit --message";
         "gam" = "git add . && git commit --message";
+        "gab" = "git add . && git commit --message 'Add content' && git push";
         "gp" = "git push";
         "gpf" = "git push --force-with-lease";
         "gpu" = "git push --set-upstream";
@@ -123,12 +128,12 @@
           mkdir -p $argv[1] && cd $argv[1]
         end
 
-        function freq 
+        function freq
           history | cut -c8- | cut -d" " --fields=1"$argv[1]" | sort | uniq -c | sort -rn
         end
 
         function gap
-          git add . && git commit --message="$argv[1]" && git push 
+          git add . && git commit --message="$argv[1]" && git push
         end
 
         function gc
