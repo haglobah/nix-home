@@ -84,12 +84,6 @@ const BINDINGS = [
     title: 'Files (Nautilus)',
     command: 'nautilus'
   },
-  // More bindings can be added, for example:
-  // {
-  //   shortcut: 'F11',
-  //   title: 'Gworldclock',
-  //   command: 'gworldclock'
-  // },
 ];
 
 import Gio from 'gi://Gio';
