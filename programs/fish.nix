@@ -167,6 +167,22 @@
           git fetch origin
         end
 
+        function wt --description "Switch to a git worktree"
+          # Get the list of worktrees
+          set worktree_info (git worktree list | grep $argv[1])
+
+          if test -z "$worktree_info"
+              echo "Worktree '$argv[1]' not found."
+              echo "Available worktrees:"
+              git worktree list | cut -d' ' -f1 | xargs -n1 basename
+              return 1
+          end
+
+          # Extract the path (first column)
+          set worktree_path (echo $worktree_info | cut -d' ' -f1)
+          cd $worktree_path
+        end
+
         function gm
           git add ''$argv[2..-1]
           git commit --message="$argv[1]"
