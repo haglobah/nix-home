@@ -56,8 +56,9 @@
         "gim" = "git init && git add . && git commit --message \"Initial commit\"";
         "gclo" = "git clone";
         "ga" = "git add";
-        "gs" = "git status -s -b";
-        "gbr" = "git branch -a -v";
+        "gs" = "git status --short --branch";
+        "gbr" = "git branch --all --verbose";
+        "gbm" = "git branch --move";
         "gcm" = "git commit --message";
         "gam" = "git add . && git commit --message";
         "gab" = "git add . && git commit --message 'Add content' && git push";
@@ -86,10 +87,9 @@
         "gre" = "git restore";
         "gu" = "git restore --staged";
         "gun" = "git rm --cached";
-        "gcb" = "git checkout -b";
         "gsw" = "git switch";
         "gs-" = "git switch -";
-        "gsc" = "git switch -c";
+        "gsc" = "git switch --create";
         "gco" = "git checkout";
         "gme" = "git merge";
         "gmb" = "git checkout HEAD^";
