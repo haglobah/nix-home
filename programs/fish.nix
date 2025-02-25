@@ -54,7 +54,7 @@
         "g" = "git";
         "gi" = "git init";
         "gim" = "git init && git add . && git commit --message \"Initial commit\"";
-        "gcl" = "git clone";
+        "gclo" = "git clone";
         "ga" = "git add";
         "gs" = "git status -s -b";
         "gbr" = "git branch -a -v";
@@ -140,7 +140,7 @@
           git add . && git commit --message="$argv[1]" && git push
         end
 
-        function gc
+        function gcl
           git clone $argv[1] && cd (string split : (basename $argv[1] .git))[-1]
         end
 
@@ -165,6 +165,15 @@
           git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
 
           git fetch origin
+        end
+
+        function gc
+          gcw $argv
+          git worktree add main
+          git worktree add work
+          git worktree add scratch
+
+          cd main
         end
 
         function wt --description "Switch to a git worktree"
