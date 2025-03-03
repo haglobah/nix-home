@@ -65,11 +65,9 @@
       tor-browser
       chromium
       obsidian
-      anytype
       discord
       signal-desktop
       telegram-desktop
-      slack
       zoom-us
       thunderbird
       gnome-tweaks
