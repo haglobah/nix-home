@@ -64,6 +64,7 @@
       keepassxc
       tor-browser
       chromium
+      librewolf
       obsidian
       discord
       signal-desktop
