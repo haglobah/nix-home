@@ -46,7 +46,7 @@
       ydotool
       wl-clipboard
 
-      emacs29
+      emacs30
       ripgrep
       fd
       python314
@@ -214,7 +214,7 @@
           "layout.spellcheckDefault" = "0";
         };
 
-        extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+        extensions.packages = with inputs.firefox-addons.packages."x86_64-linux"; [
           bitwarden
           darkreader
           videospeed
