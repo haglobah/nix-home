@@ -51,6 +51,11 @@
         "e" = "emacs . &";
         "h" = "history";
 
+        "j" = "just";
+        "jd" = "just dev";
+        "ja" = "just all";
+        "jt" = "just test";
+
         "g" = "git";
         "gi" = "git init";
         "gim" = "git init && git add . && git commit --message \"Initial commit\"";
