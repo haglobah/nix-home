@@ -56,6 +56,11 @@
         "ja" = "just all";
         "jt" = "just test";
 
+        "k" = "kubectl";
+        "kg" = "kubectl get";
+        "kd" = "kubectl describe";
+        "ke" = "kubectl exec";
+
         "wm" = "wt main";
         "ww" = "wt work";
         "ws" = "wt scratch";
