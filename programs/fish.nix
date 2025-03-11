@@ -56,6 +56,10 @@
         "ja" = "just all";
         "jt" = "just test";
 
+        "wm" = "wt main";
+        "ww" = "wt work";
+        "ws" = "wt scratch";
+
         "g" = "git";
         "gi" = "git init";
         "gim" = "git init && git add . && git commit --message \"Initial commit\"";
