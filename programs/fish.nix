@@ -210,6 +210,10 @@
           git rev-parse --abbrev-ref HEAD
         end
 
+        function gbu
+          git branch --set-upstream-to=origin/(git_branch_name) (git_branch_name)
+        end
+
         function gb
           git for-each-ref --color --sort=-committerdate --format='%(color:green)%(ahead-behind:HEAD)%(color:reset)*%(color:blue)%(refname:short)%(color:reset)*%(color:yellow)%(committerdate:relative)%(color:reset)*%(describe)' refs/ | column --separator='*' --table --table-columns='Ahead-Behind,Branch Name,Last Commit,Description'
         end
