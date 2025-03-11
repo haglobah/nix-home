@@ -183,7 +183,7 @@
 
         function wt --description "Switch to a git worktree"
           # Get the list of worktrees
-          set worktree_info (git worktree list | grep "\[$argv[1]\]")
+          set worktree_info (git worktree list | grep "/$argv[1] ")
 
           if test -z "$worktree_info"
               echo "Worktree '$argv[1]' not found."
