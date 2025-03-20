@@ -80,7 +80,7 @@ const BINDINGS = [
     command: 'chromium'
   },
   {
-    shortcut: '<Super>w',
+    shortcut: '<Super>b',
     title: 'Librewolf',
     command: 'librewolf'
   },
