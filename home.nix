@@ -136,6 +136,9 @@
           "gnome-magic-window@adrienverge"
         ];
       };
+      "org/gnome/shell/keybindings" = {
+        toggle-message-tray = [];
+      };
     };
 
     services.emacs.enable = true;
