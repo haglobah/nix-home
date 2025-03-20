@@ -50,6 +50,9 @@
         "v" = "nvim .";
         "e" = "emacs . &";
         "h" = "history";
+        "rg" = "rg --line-number --context=2";
+        "wh" = "which";
+        "wha" = "type --all";
 
         "j" = "just";
         "jd" = "just dev";
@@ -135,10 +138,7 @@
         "lta" = "lt -la";
         "mv" = "mv -i";
         "rm" = "rm -i";
-        "wh" = "type -a";
         "du" = "du -ach | sort -h";
-
-        "grep" = "grep --color=auto";
       };
 
       shellInit = ''
