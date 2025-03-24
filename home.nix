@@ -40,6 +40,7 @@
     home.packages = with pkgs; [
       wget
       curl
+      traceroute
       jq
       tmux
       cachix
