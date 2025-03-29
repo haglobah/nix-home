@@ -139,6 +139,9 @@
       };
       "org/gnome/shell/keybindings" = {
         toggle-message-tray = [];
+        toggle-quick-settings = [];
+        focus-active-notification = [];
+        toggle-application-view = [];
       };
     };
 
