@@ -61,6 +61,8 @@
       gnumake
       markdownlint-cli
 
+      mob
+
       zed-editor
       keepassxc
       tor-browser
@@ -96,6 +98,7 @@
       ".config/zed/settings.json".source = dotfiles/zed/settings.json;
       ".config/zed/keymap.json".source = dotfiles/zed/keymap.json;
 
+      ".mob".source = dotfiles/mob.sh/.mob;
       # # You can also set the file content immediately.
       # ".gradle/gradle.properties".text = ''
       #   org.gradle.console=verbose
