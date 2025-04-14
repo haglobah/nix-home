@@ -62,6 +62,7 @@
       markdownlint-cli
 
       mob
+      comma
 
       zed-editor
       keepassxc
