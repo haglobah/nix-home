@@ -75,6 +75,7 @@
         "ga" = "git add";
         "gs" = "git status --short --branch";
         "gbr" = "git branch --all --verbose";
+        "gbu" = "git branch --set-upstream-to=origin/(git_branch_name) (git_branch_name)";
         "gbm" = "git branch --move";
         "gcm" = "git commit --message";
         "gam" = "git add . && git commit --message";
@@ -217,10 +218,6 @@
 
         function git_branch_name
           git rev-parse --abbrev-ref HEAD
-        end
-
-        function gbu
-          git branch --set-upstream-to=origin/(git_branch_name) (git_branch_name)
         end
 
         function gb
