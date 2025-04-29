@@ -46,6 +46,9 @@
           setCursor = true;
         };
 
+        "nrd" = "npm run dev";
+        "nrp" = "npm run playground";
+
         "c" = "code . &";
         "v" = "nvim .";
         "e" = "emacs . &";
