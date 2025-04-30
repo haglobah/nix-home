@@ -128,6 +128,8 @@
           setCursor = true;
         };
 
+        "uf" = "echo \"use flake . -Lv\" >> .envrc";
+
         "da" = "direnv allow";
         "dr" = "direnv reload";
 
