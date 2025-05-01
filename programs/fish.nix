@@ -129,6 +129,7 @@
         };
 
         "uf" = "echo \"use flake . -Lv\" >> .envrc";
+        "np" = "nix run github:haglobah/templater -Lv -- --to";
 
         "da" = "direnv allow";
         "dr" = "direnv reload";
