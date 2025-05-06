@@ -131,6 +131,7 @@
         "np" = "nix run github:haglobah/templater -Lv -- --to";
         "uf" = "echo \"use flake . -Lv\" >> .envrc";
         "ud" = "echo \"use flake . -Lv\" >> .envrc && direnv allow";
+        "uda" = "git add flake.nix && echo \"use flake . -Lv\" >> .envrc && direnv allow";
         "da" = "direnv allow";
         "dr" = "direnv reload";
 
