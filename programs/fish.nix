@@ -67,7 +67,7 @@
         "kd" = "kubectl describe";
         "ke" = "kubectl exec";
 
-        "wm" = "wt main";
+        "wm" = "wt remote";
         "ww" = "wt work";
         "ws" = "wt scratch";
 
@@ -181,7 +181,7 @@
           git clone $link $folder_name/work
           cd $folder_name/work
 
-          git worktree add ../main
+          git worktree add ../remote
           git worktree add ../scratch
 
         end
