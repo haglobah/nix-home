@@ -167,35 +167,27 @@
         end
 
         function gcw
-          set -f link $argv[1]
+          set --function link $argv[1]
 
           if test (count $argv) -eq 1
-            set -f folder_name (string split : (basename $argv[1] .git))[-1]
+            set --function folder_name (string split : (basename $argv[1] .git))[-1]
           else if test (count $argv) -eq 2
-            set -f folder_name $argv[2]
+            set --function folder_name $argv[2]
           else
             echo "Wrong number of arguments"
             return 1
           end
 
-          mkdir $folder_name
-          cd $folder_name
+          git clone $link $folder_name/main
+          cd $folder_name/main
 
-          git clone --bare $link .bare
-          echo "gitdir: .bare" > .git
+          git worktree add ../work
+          git worktree add ../scratch
 
-          git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
-
-          git fetch origin
         end
 
         function gc
           gcw $argv
-          git worktree add main
-          git worktree add work
-          git worktree add scratch
-
-          cd main
         end
 
         function wt --description "Switch to a git worktree"
