@@ -178,10 +178,10 @@
             return 1
           end
 
-          git clone $link $folder_name/main
-          cd $folder_name/main
+          git clone $link $folder_name/work
+          cd $folder_name/work
 
-          git worktree add ../work
+          git worktree add ../main
           git worktree add ../scratch
 
         end
