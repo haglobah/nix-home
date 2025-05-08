@@ -30,6 +30,7 @@
         checkout.defaultRemote = "origin";
         rerere.enabled = true;
         branch.sort = "-committerdate";
+        diff.algorithm = "histogram";
         url = {
           "https://github.com/" = {insteadOf = "gh:";};
           "git@github.com:" = {insteadOf = "gs:";};
