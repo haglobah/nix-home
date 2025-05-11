@@ -64,11 +64,11 @@
         extraSpecialArgs = { inherit inputs; };
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
-        modules = [ 
+        modules = [
           ./home.nix
           inputs.nix-index-database.hmModules.nix-index
           inputs.nvf.homeManagerModules.default
-          inputs.catppuccin.homeManagerModules.catppuccin
+          inputs.catppuccin.homeModules.catppuccin
           {
             home.packages = [
               inputs.alles.packages.${system}.default
