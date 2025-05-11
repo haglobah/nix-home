@@ -38,6 +38,7 @@
     home.stateVersion = "22.11"; # Please read the comment before changing.
 
     home.packages = with pkgs; [
+      # CLI
       wget
       curl
       traceroute
@@ -46,13 +47,18 @@
       cachix
       ydotool
       wl-clipboard
+      dua
 
+      # Emacs
       emacs30
       ripgrep
       fd
       python314
       aider-chat
+      mu
+      isync
 
+      # Neovim
       neovim
       zig
       gcc
@@ -61,11 +67,12 @@
       gnumake
       markdownlint-cli
 
+      # mob programming
       mob
       comma
 
+      # other GUI Tools
       zed-editor
-      keepassxc
       tor-browser
       chromium
       librewolf
@@ -166,23 +173,50 @@
     #   enable = true;
     # };
 
-    # accounts.email.accounts = {
-    #   posteo = {
-    #     primary = true;
-    #     himalaya = {
-    #       enable = true;
-    #     };
-    #     address = "bah@posteo.de";
-    #     realName = "Beat Hagenlocher";
-    #     userName = "beat";
-    #     passwordCommand = "bw login --api-key && bw unlock && bw get password bah_hagenlob@posteo.de";
-    #     imap = {
-    #       host = "posteo.de";
-    #       port = 993;
-    #       tls.enable = true;
-    #     };
-    #   };
-    # };
+    programs.mbsync.enable = true;
+    programs.msmtp.enable = true;
+    programs.notmuch = {
+      enable = true;
+      hooks = {
+        preNew = "mbsync --all";
+      };
+    };
+    accounts.email.accounts = {
+      posteo = {
+        primary = true;
+        address = "hagenlob@posteo.de";
+        realName = "Beat Hagenlocher";
+        userName = "bah@posteo.de";
+        passwordCommand = "bw get password bah_hagenlob@posteo.de";
+        signature = {
+          text = ''
+            Liebe Grüße
+            Beat Hagenlocher
+          '';
+          showSignature = "append";
+        };
+        smtp = {
+          host = "posteo.de";
+          port = 465;
+          tls.enable = true;
+        };
+        imap = {
+          host = "posteo.de";
+          port = 993;
+          tls.enable = true;
+        };
+
+        mbsync = {
+          enable = true;
+          create = "imap";
+        };
+        msmtp = {
+          enable = true;
+        };
+        notmuch.enable = true;
+        himalaya.enable = true;
+      };
+    };
 
     programs.kitty = {
       enable = true;
