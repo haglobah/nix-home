@@ -137,6 +137,7 @@
 
         "hm" = "home-manager";
         "hsw" = "home-manager switch --flake .";
+        "hs" = "home-manager switch --flake /home/beat/nix-home/";
         "reload" = "source ~/.config/fish/config.fish";
       };
       shellAliases = {
