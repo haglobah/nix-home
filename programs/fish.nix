@@ -57,6 +57,16 @@
         "wh" = "which";
         "wha" = "type --all";
 
+
+        "ae" = {
+          expansion = "cd ~/mynix/secrets/ && agenix --edit % && cd -";
+          setCursor = true;
+        };
+        "ad" = {
+          expansion = "cd ~/mynix/secrets/ && agenix --decrypt % && cd -";
+          setCursor = true;
+        };
+
         "j" = "just";
         "jd" = "just dev";
         "ja" = "just all";
@@ -137,7 +147,7 @@
 
         "hm" = "home-manager";
         "hsw" = "home-manager switch --flake .";
-        "hs" = "home-manager switch --flake /home/beat/nix-home/";
+        "hs" = "home-manager switch --flake ~/nix-home/";
         "reload" = "source ~/.config/fish/config.fish";
       };
       shellAliases = {
