@@ -31,18 +31,14 @@
       inputs.hyprland.follows = "hyprland";
     };
 
-    alles = {
-      url = "github:haglobah/alles";
-    };
+    alles = { url = "github:haglobah/alles"; };
 
     agenix = {
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    ghostty = {
-      url = "github:ghostty-org/ghostty";
-    };
+    ghostty = { url = "github:ghostty-org/ghostty"; };
 
     nvf = {
       url = "github:notashelf/nvf";
@@ -58,6 +54,8 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
+      devShells.${system}.default =
+        pkgs.mkShell { packages = [ pkgs.nixfmt ]; };
       homeConfigurations."beat" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 

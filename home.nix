@@ -50,7 +50,7 @@
       dua
 
       # Emacs
-      emacs30
+      ((emacsPackagesFor emacs30).emacsWithPackages (epkgs: [epkgs.mu4e]))
       ripgrep
       fd
       python314
@@ -175,6 +175,7 @@
 
     programs.mbsync.enable = true;
     programs.msmtp.enable = true;
+    programs.mu.enable = true;
     programs.notmuch = {
       enable = true;
       hooks = {
