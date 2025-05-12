@@ -3,7 +3,8 @@
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   imports = [
     ./modules/registry.nix
 
@@ -48,9 +49,11 @@
       ydotool
       wl-clipboard
       dua
+      gnupg
+      pass
 
       # Emacs
-      ((emacsPackagesFor emacs30).emacsWithPackages (epkgs: [epkgs.mu4e]))
+      ((emacsPackagesFor emacs30).emacsWithPackages (epkgs: [ epkgs.mu4e ]))
       ripgrep
       fd
       python314
@@ -100,8 +103,10 @@
     ];
 
     home.file = {
-      ".local/share/gnome-shell/extensions/gnome-magic-window@adrienverge/extension.js".source = dotfiles/gnome-magic-window/extension.js;
-      ".local/share/gnome-shell/extensions/gnome-magic-window@adrienverge/metadata.json".source = dotfiles/gnome-magic-window/metadata.json;
+      ".local/share/gnome-shell/extensions/gnome-magic-window@adrienverge/extension.js".source =
+        dotfiles/gnome-magic-window/extension.js;
+      ".local/share/gnome-shell/extensions/gnome-magic-window@adrienverge/metadata.json".source =
+        dotfiles/gnome-magic-window/metadata.json;
 
       ".config/zed/settings.json".source = dotfiles/zed/settings.json;
       ".config/zed/keymap.json".source = dotfiles/zed/keymap.json;
@@ -131,9 +136,7 @@
     xdg.enable = true;
     xdg.autostart = {
       enable = true;
-      entries = [
-        "${pkgs.linphone}/share/applications/linphone.desktop"
-      ];
+      entries = [ "${pkgs.linphone}/share/applications/linphone.desktop" ];
     };
 
     dconf.settings = {
@@ -144,15 +147,13 @@
       "org/gnome/shell" = {
         disable-user-extensions = false;
 
-        enabled-extensions = [
-          "gnome-magic-window@adrienverge"
-        ];
+        enabled-extensions = [ "gnome-magic-window@adrienverge" ];
       };
       "org/gnome/shell/keybindings" = {
-        toggle-message-tray = [];
-        toggle-quick-settings = [];
-        focus-active-notification = [];
-        toggle-application-view = [];
+        toggle-message-tray = [ ];
+        toggle-quick-settings = [ ];
+        focus-active-notification = [ ];
+        toggle-application-view = [ ];
       };
     };
 
@@ -183,12 +184,49 @@
       };
     };
     accounts.email.accounts = {
+      ag = rec {
+        address = "beat.hagenlocher@active-group.de";
+        userName = address;
+        mbsync = {
+          enable = true;
+          create = "both";
+          remove = "both";
+          expunge = "both";
+          patterns = [
+            "*"
+            "!Drafts"
+            "!Deleted Messages"
+          ];
+        };
+        msmtp = {
+          enable = true;
+          extraConfig = {
+            "syslog" = "LOG_USER";
+          };
+        };
+        notmuch.enable = false;
+        mu.enable = true;
+        realName = "Beat Hagenlocher";
+        passwordCommand = "cat ~/.agpassword";
+        imap = {
+          host = "mail.active-group.de";
+          port = null;
+          tls = {
+            enable = true;
+            useStartTls = true;
+          };
+        };
+        smtp = {
+          host = "mail.active-group.de";
+          port = null;
+        };
+      };
       posteo = {
         primary = true;
         address = "hagenlob@posteo.de";
         realName = "Beat Hagenlocher";
-        userName = "bah@posteo.de";
-        passwordCommand = "bw get password bah_hagenlob@posteo.de";
+        userName = "hagenlob@posteo.de";
+        passwordCommand = "cat ~/.posteopassword";
         signature = {
           text = ''
             Liebe Grüße
@@ -209,11 +247,19 @@
 
         mbsync = {
           enable = true;
-          create = "imap";
+          create = "both";
+          remove = "both";
+          expunge = "both";
+          patterns = [
+            "*"
+            "!Drafts"
+            "!Deleted Messages"
+          ];
         };
         msmtp = {
           enable = true;
         };
+
         notmuch.enable = true;
         himalaya.enable = true;
       };
