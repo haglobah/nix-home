@@ -145,6 +145,8 @@
         "da" = "direnv allow";
         "dr" = "direnv reload";
 
+        "ds" = "doom sync";
+
         "hm" = "home-manager";
         "hsw" = "home-manager switch --flake .";
         "hs" = "home-manager switch --flake ~/nix-home/";
