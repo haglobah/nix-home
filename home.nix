@@ -199,14 +199,17 @@
             "!Deleted Messages"
           ];
         };
+
         msmtp = {
           enable = true;
           extraConfig = {
             "syslog" = "LOG_USER";
           };
         };
+
         notmuch.enable = false;
         mu.enable = true;
+
         realName = "Beat Hagenlocher";
         passwordCommand = "cat ~/.agpassword";
         imap = {
@@ -235,6 +238,7 @@
           '';
           showSignature = "append";
         };
+
         smtp = {
           host = "posteo.de";
           port = 465;
@@ -257,12 +261,11 @@
             "!Deleted Messages"
           ];
         };
-        msmtp = {
-          enable = true;
-        };
+        msmtp.enable = true;
+        mu.enable = true;
 
-        notmuch.enable = true;
-        himalaya.enable = true;
+        notmuch.enable = false;
+        himalaya.enable = false;
       };
     };
 
