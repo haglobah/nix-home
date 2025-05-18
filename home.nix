@@ -58,8 +58,8 @@
       fd
       python314
       aider-chat
-      mu
-      isync
+      # mu
+      # isync
 
       # Neovim
       neovim
@@ -171,46 +171,14 @@
       };
     };
 
-    # programs.himalaya = {
-    #   enable = true;
-    # };
-
     programs.mbsync.enable = true;
     programs.msmtp.enable = true;
     programs.mu.enable = true;
-    programs.notmuch = {
-      enable = false;
-      hooks = {
-        preNew = "mbsync --all";
-      };
-    };
     accounts.email.accounts = {
       ag = rec {
         address = "beat.hagenlocher@active-group.de";
-        userName = address;
-        mbsync = {
-          enable = true;
-          create = "both";
-          remove = "both";
-          expunge = "both";
-          patterns = [
-            "*"
-            "!Drafts"
-            "!Deleted Messages"
-          ];
-        };
-
-        msmtp = {
-          enable = true;
-          extraConfig = {
-            "syslog" = "LOG_USER";
-          };
-        };
-
-        notmuch.enable = false;
-        mu.enable = true;
-
         realName = "Beat Hagenlocher";
+        userName = address;
         passwordCommand = "cat ~/.agpassword";
         imap = {
           host = "mail.active-group.de";
@@ -223,6 +191,25 @@
         smtp = {
           host = "mail.active-group.de";
           port = null;
+        };
+
+        mbsync = {
+          enable = true;
+          create = "both";
+          remove = "both";
+          expunge = "both";
+          patterns = [
+            "*"
+            "!Drafts"
+            "!Deleted Messages"
+          ];
+        };
+        mu.enable = true;
+        msmtp = {
+          enable = true;
+          extraConfig = {
+            "syslog" = "LOG_USER";
+          };
         };
       };
       posteo = {
@@ -239,14 +226,14 @@
           showSignature = "append";
         };
 
-        smtp = {
-          host = "posteo.de";
-          port = 465;
-          tls.enable = true;
-        };
         imap = {
           host = "posteo.de";
           port = 993;
+          tls.enable = true;
+        };
+        smtp = {
+          host = "posteo.de";
+          port = 465;
           tls.enable = true;
         };
 
@@ -263,9 +250,6 @@
         };
         msmtp.enable = true;
         mu.enable = true;
-
-        notmuch.enable = false;
-        himalaya.enable = false;
       };
     };
 
