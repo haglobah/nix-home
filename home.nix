@@ -179,7 +179,7 @@
     programs.msmtp.enable = true;
     programs.mu.enable = true;
     programs.notmuch = {
-      enable = true;
+      enable = false;
       hooks = {
         preNew = "mbsync --all";
       };
