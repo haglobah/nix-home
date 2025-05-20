@@ -4,7 +4,7 @@
       enable = true;
       profiles.default = {
         userSettings = {
-          "workbench.colorTheme" = "Catppuccin Macchiato";
+          "workbench.colorTheme" = "Catppuccin Mocha";
           "editor.fontFamily" = "'FiraCode Nerd Font', 'DroidSansMono', monospace";
           "editor.fontLigatures" = true;
           "editor.minimap.enabled" = false;

@@ -237,7 +237,7 @@
 
     catppuccin = {
       enable = true;
-      flavor = "macchiato";
+      flavor = "mocha";
       starship.enable = true;
       kitty.enable = true;
       gtk.icon.enable = true;
