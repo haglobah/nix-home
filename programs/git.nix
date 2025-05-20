@@ -30,7 +30,17 @@
         checkout.defaultRemote = "origin";
         rerere.enabled = true;
         branch.sort = "-committerdate";
-        diff.algorithm = "histogram";
+        diff = {
+          algorithm = "histogram";
+          mnemonicPrefix = true;
+          renames = true;
+        };
+        merge.conflictStyle = "zdiff3";
+        fetch = {
+          prune = true;
+          pruneTags = true;
+          all = true;
+        };
         url = {
           "https://github.com/" = {insteadOf = "gh:";};
           "git@github.com:" = {insteadOf = "gs:";};
