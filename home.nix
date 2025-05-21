@@ -60,6 +60,9 @@
       python314
       aider-chat
 
+      # Install globally to make gleam-ts-mode happy
+      gleam
+
       # Neovim
       neovim
       zig
