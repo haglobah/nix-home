@@ -183,7 +183,7 @@
       };
 
       keybindings = {
-        "ctrl+t" = "launch --cwd=current --type=tab";
+        "ctrl+g" = "launch --cwd=current --type=tab";
         "alt+left" = "prev_tab";
         "alt+right" = "next_tab";
         "alt+shift+left" = "move_tab_backward";
@@ -203,7 +203,8 @@
         "ctrl+minus" = "change_font_size all -1.0";
         # "ctrl+backspace" = "send_text all \\x17";
         # "ctrl+delete" = "send_key alt+d";
-        "ctrl+f" = "send_text all \\x17";
+        "ctrl+s" = "send_text all \\x17";
+        "ctrl+t" = "send_key alt+d";
       };
     };
 
