@@ -22,7 +22,7 @@ const BINDINGS = [
   {
     shortcut: '<Super>t',
     title: 'Kitty',
-    command: 'kitty'
+    command: 'kitty --listen-on unix:/tmp/mykitty'
   },
   {
     shortcut: '<Super>f',

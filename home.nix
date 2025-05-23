@@ -180,6 +180,7 @@
 
       settings = {
         enabled_layouts = "splits:split_axis=horizontal";
+        allow_remote_control = "yes";
       };
 
       keybindings = {
