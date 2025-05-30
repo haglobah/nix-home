@@ -12,8 +12,9 @@
         "ni" = "nix repl";
         "nix-list" = "nix profile history --profile /nix/var/nix/profiles/system";
         "nix-rm-boot-entries" = "nix profile wipe-history --profile /nix/var/nix/profiles/system --older-than 30d";
-        "nre" = "sudo nixos-rebuild switch --flake .";
-        "nure" = "nix flake update && sudo nixos-rebuild switch --flake .";
+        "rebuild" = "sudo nixos-rebuild switch --flake .";
+        "nre" = "sudo nixos-rebuild switch --flake ~/mynix/";
+        "nure" = "nix flake update && sudo nixos-rebuild switch --flake ~/mynix/";
         "nsh" = {
           expansion = "nix shell n#% -c fish";
           setCursor = true;
