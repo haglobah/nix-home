@@ -138,6 +138,10 @@
           expansion = "gh repo create % --private --source=. --remote=origin && git push --set-upstream origin main";
           setCursor = true;
         };
+        "ghp" = {
+          expansion = "gh repo create % --public --source=. --remote=origin && git push --set-upstream origin main";
+          setCursor = true;
+        };
 
         "np" = "nix run github:haglobah/templater -Lv -- --to";
         "uf" = "echo \"use flake . -Lv\" >> .envrc";
