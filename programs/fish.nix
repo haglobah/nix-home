@@ -3,7 +3,8 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   config = {
     programs.fish = {
       enable = true;
@@ -11,7 +12,8 @@
         "n" = "nix";
         "ni" = "nix repl";
         "nix-list" = "nix profile history --profile /nix/var/nix/profiles/system";
-        "nix-rm-boot-entries" = "nix profile wipe-history --profile /nix/var/nix/profiles/system --older-than 30d";
+        "nix-rm-boot-entries" =
+          "nix profile wipe-history --profile /nix/var/nix/profiles/system --older-than 30d";
         "rebuild" = "sudo nixos-rebuild switch --flake .";
         "nre" = "sudo nixos-rebuild switch --flake ~/mynix/";
         "nure" = "nix flake update && sudo nixos-rebuild switch --flake ~/mynix/";
@@ -27,7 +29,10 @@
         "nf" = "nix flake";
         "nfc" = "nix flake check";
         "nft" = "nix flake init --template";
-        "nfn" = "nix flake new --template";
+        "nfn" = {
+          expansion = "nix flake new % --template";
+          setCursor = true;
+        };
         "nfs" = "nix flake show";
         "nfu" = "nix flake update";
         "nr" = "nix run";
@@ -57,7 +62,6 @@
         "rg" = "rg --line-number --context=2";
         "wh" = "which";
         "wha" = "type --all";
-
 
         "ae" = {
           expansion = "cd ~/mynix/secrets/ && agenix --edit % && cd -";
@@ -127,7 +131,8 @@
         "gmb" = "git checkout HEAD^";
         "gl" = "git log --oneline --decorate --graph";
         "gls" = "git log --graph --stat";
-        "gld" = "git -c color.ui=always log --graph --pretty=format:'%C(yellow)%h%C(auto) %d %s}%C(green)%cr%C(reset) | %C(blue)%an%C(reset)' --abbrev-commit --date=relative | column --separator '}' --table | less";
+        "gld" =
+          "git -c color.ui=always log --graph --pretty=format:'%C(yellow)%h%C(auto) %d %s}%C(green)%cr%C(reset) | %C(blue)%an%C(reset)' --abbrev-commit --date=relative | column --separator '}' --table | less";
         "gsh" = "git show";
 
         "ghi" = {
