@@ -22,33 +22,12 @@
 
     catppuccin.url = "github:catppuccin/nix";
 
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
-
     alles = {
       url = "github:haglobah/alles";
     };
 
     agenix = {
       url = "github:ryantm/agenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    ghostty = {
-      url = "github:ghostty-org/ghostty";
-    };
-
-    nvf = {
-      url = "github:notashelf/nvf";
-      # You can override the input nixpkgs to follow your system's
-      # instance of nixpkgs. This is safe to do as nvf does not depend
-      # on a binary cache.
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -70,13 +49,11 @@
         modules = [
           ./home.nix
           inputs.nix-index-database.hmModules.nix-index
-          inputs.nvf.homeManagerModules.default
           inputs.catppuccin.homeModules.catppuccin
           {
             home.packages = [
               inputs.alles.packages.${system}.default
               inputs.agenix.packages.${system}.default
-              inputs.ghostty.packages.${system}.default
             ];
           }
         ];

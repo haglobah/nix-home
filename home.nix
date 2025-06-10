@@ -10,8 +10,8 @@
     ./modules/email.nix
 
     ./programs/git.nix
-    ./programs/vscode.nix
-    ./programs/nvf.nix
+    # ./programs/vscode.nix
+    # ./programs/nvf.nix
     ./programs/bash.nix
     ./programs/fish.nix
   ];
@@ -52,6 +52,7 @@
       dua
       gnupg
       pass
+      comma
 
       # Emacs
       ((emacsPackagesFor emacs30).emacsWithPackages (epkgs: [ epkgs.mu4e ]))
@@ -74,7 +75,6 @@
 
       # mob programming
       mob
-      comma
 
       # other GUI Tools
       zed-editor
@@ -173,6 +173,34 @@
       };
     };
 
+    programs.ghostty = {
+      enable = true;
+      enableBashIntegration = true;
+      enableFishIntegration = true;
+      clearDefaultKeybinds = true;
+      settings = {
+        font-size = 16;
+        keybind = [
+          "ctrl+t=new_tab"
+          "alt+arrow_left=previous_tab"
+          "alt+arrow_right=next_tab"
+          "alt+shift+arrow_left=move_tab:-1"
+          "alt+shift+arrow_right=move_tab:1"
+          "ctrl+]=new_split:right"
+          "ctrl+[=new_split:down"
+          "shift+arrow_left=goto_split:left"
+          "shift+arrow_right=goto_split:right"
+          "shift+arrow_up=goto_split:up"
+          "shift+arrow_down=goto_split:down"
+          "ctrl + + =increase_font_size:1"
+          "ctrl + equal =reset_font_size"
+          "ctrl + - =decrease_font_size:1"
+          # ctrl+s
+          # ctrl+g
+        ];
+      };
+    };
+
     programs.kitty = {
       enable = true;
       shellIntegration.enableBashIntegration = true;
@@ -202,8 +230,6 @@
         "ctrl+plus" = "change_font_size all +1.0";
         "ctrl+equal" = "change_font_size all 10.0";
         "ctrl+minus" = "change_font_size all -1.0";
-        # "ctrl+backspace" = "send_text all \\x17";
-        # "ctrl+delete" = "send_key alt+d";
         "ctrl+s" = "send_text all \\x17";
         "ctrl+g" = "send_key alt+d";
       };
