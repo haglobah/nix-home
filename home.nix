@@ -179,24 +179,24 @@
       enableFishIntegration = true;
       clearDefaultKeybinds = true;
       settings = {
-        font-size = 16;
+        font-size = 10;
         keybind = [
           "ctrl+t=new_tab"
-          "alt+arrow_left=previous_tab"
-          "alt+arrow_right=next_tab"
-          "alt+shift+arrow_left=move_tab:-1"
-          "alt+shift+arrow_right=move_tab:1"
+          "alt+left=previous_tab"
+          "alt+right=next_tab"
+          "alt+shift+left=move_tab:-1"
+          "alt+shift+right=move_tab:1"
           "ctrl+]=new_split:right"
           "ctrl+[=new_split:down"
-          "shift+arrow_left=goto_split:left"
-          "shift+arrow_right=goto_split:right"
-          "shift+arrow_up=goto_split:up"
-          "shift+arrow_down=goto_split:down"
-          "ctrl + + =increase_font_size:1"
-          "ctrl + equal =reset_font_size"
-          "ctrl + - =decrease_font_size:1"
+          "shift+left=goto_split:left"
+          "shift+right=goto_split:right"
+          "shift+up=goto_split:up"
+          "shift+down=goto_split:down"
+          "ctrl+equal=reset_font_size"
+          "ctrl+minus=decrease_font_size:1"
           # ctrl+s
           # ctrl+g
+          # "ctrl+plus=increase_font_size:1"
         ];
       };
     };
