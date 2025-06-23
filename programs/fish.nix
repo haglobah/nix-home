@@ -74,6 +74,8 @@
 
         "j" = "just";
         "jd" = "just dev";
+        "jr" = "just run";
+        "jb" = "just build";
         "ja" = "just all";
         "jt" = "just test";
 
