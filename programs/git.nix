@@ -44,7 +44,7 @@
         url = {
           "https://github.com/" = {insteadOf = "gh:";};
           "git@github.com:" = {insteadOf = "gs:";};
-          "git@github.com:haglobah/" = {insteadOf = "my:";};
+          "git@github.com:haglobah/" = {insteadOf = "bah:";};
           "https://gitlab.com/" = {insteadOf = "gl:";};
           "ssh://git@gitlab.active-group.de:1022/ag/" = {insteadOf = "ag:";};
           "git@github.com:active-group/" = {insteadOf = "agh:";};
