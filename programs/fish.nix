@@ -73,6 +73,7 @@
         };
 
         "j" = "just";
+        "js" = "just setup";
         "jd" = "just dev";
         "jr" = "just run";
         "jb" = "just build";
