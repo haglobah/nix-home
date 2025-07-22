@@ -44,15 +44,18 @@
       wget
       curl
       traceroute
+      dnsutils
       jq
       tmux
       cachix
-      ydotool
-      wl-clipboard
       dua
       gnupg
       pass
       comma
+
+      # for `alles`
+      ydotool
+      wl-clipboard
 
       # Emacs
       ((emacsPackagesFor emacs30).emacsWithPackages (epkgs: [ epkgs.mu4e ]))
