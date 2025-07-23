@@ -109,7 +109,9 @@
         "gf" = "git pull";
         "gfa" = "git fetch --all";
         "gfap" = "git fetch --all --prune";
+        "gr" = "git remote";
         "gra" = "git remote add";
+        "grr" = "git remote remove";
         "gro" = "git remote add origin";
         "grv" = "git remote --verbose";
         "gca" = "git commit --amend";
