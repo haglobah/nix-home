@@ -253,6 +253,7 @@
           vimium
           ublock-origin
         ];
+        extensions.force = true;
       };
     };
 
@@ -274,7 +275,6 @@
       starship.enable = true;
       kitty.enable = true;
       gtk.icon.enable = true;
-      gtk.enable = true;
       fzf.enable = true;
       bat.enable = true;
       cursors.enable = true;
