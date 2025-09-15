@@ -91,7 +91,6 @@
       zoom-us
       thunderbird
       gnome-tweaks
-      linphone
       teams-for-linux
 
       # # It is sometimes useful to fine-tune packages, for example, by applying
@@ -106,7 +105,7 @@
       # (pkgs.writeShellScriptBin "my-hello" ''
       #   echo "Hello, ${config.home.username}!"
       # '')
-    ];
+    ] ++ [ inputs.nixpkgs-24-11.legacyPackages."x86_64-linux".linphone ];
 
     home.file = {
       ".local/share/gnome-shell/extensions/gnome-magic-window@adrienverge/extension.js".source =
@@ -142,7 +141,7 @@
     xdg.enable = true;
     xdg.autostart = {
       enable = true;
-      entries = [ "${pkgs.linphone}/share/applications/linphone.desktop" ];
+      entries = [ "${inputs.nixpkgs-24-11.legacyPackages."x86_64-linux".linphone}/share/applications/linphone.desktop" ];
     };
 
     dconf.settings = {
