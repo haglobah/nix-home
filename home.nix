@@ -91,7 +91,7 @@
       zoom-us
       thunderbird
       gnome-tweaks
-      # linphone
+      linphone
       teams-for-linux
 
       # # It is sometimes useful to fine-tune packages, for example, by applying
@@ -140,10 +140,10 @@
     };
 
     xdg.enable = true;
-    # xdg.autostart = {
-    #   enable = true;
-    #   entries = [ "${pkgs.linphone}/share/applications/linphone.desktop" ];
-    # };
+    xdg.autostart = {
+      enable = true;
+      entries = [ "${pkgs.linphone}/share/applications/linphone.desktop" ];
+    };
 
     dconf.settings = {
       "org/gnome/desktop/interface" = {
