@@ -53,6 +53,9 @@
       pass
       comma
 
+      # for `nix`
+      nixd
+
       # for `alles`
       ydotool
       wl-clipboard
