@@ -51,7 +51,6 @@
       dua
       gnupg
       pass
-      comma
 
       # for `nix`
       nixd
@@ -95,6 +94,9 @@
       thunderbird
       gnome-tweaks
       teams-for-linux
+
+      # Useful for login networks: https://discourse.nixos.org/t/does-wifionice-wifi-on-deutsche-bahn-german-railway-work-for-you/41646
+      captive-browser
 
       # AI
       (pkgs.buildNpmPackage {
