@@ -161,6 +161,8 @@
     # if you don't want to manage your shell through Home Manager.
     home.sessionVariables = {
       GNOME_SHELL_SLOWDOWN_FACTOR = 0.4;
+      # https://emacs-lsp.github.io/lsp-mode/page/performance/#use-plists-for-deserialization
+      LSP_USE_PLISTS = "true";
     };
 
     xdg.enable = true;
