@@ -65,6 +65,7 @@
       fd
       python314
       aider-chat
+      emacs-lsp-booster
 
       # Install globally to make gleam-ts-mode happy
       gleam
