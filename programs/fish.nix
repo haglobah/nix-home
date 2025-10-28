@@ -255,6 +255,9 @@
 
         set -gx PATH $PATH "/home/beat/.config/emacs/bin"
         set -gx EDITOR "nvim"
+
+        # for automatically adding completions from a Justfile (if supplied there as `_dev-complete`)
+        complete --command just --condition '__fish_seen_subcommand_from dev' --arguments '(just _dev-complete)'
       '';
     };
   };
