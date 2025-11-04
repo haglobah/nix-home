@@ -79,6 +79,7 @@
         "jb" = "just build";
         "ja" = "just all";
         "jt" = "just test";
+        "joc" = "just open chromium";
 
         "k" = "kubectl";
         "kg" = "kubectl get";
