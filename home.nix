@@ -39,99 +39,102 @@
     # release notes.
     home.stateVersion = "22.11"; # Please read the comment before changing.
 
-    home.packages = with pkgs; [
-      # CLI
-      wget
-      curl
-      traceroute
-      dnsutils
-      jq
-      tmux
-      cachix
-      dua
-      gnupg
-      pass
+    home.packages =
+      with pkgs;
+      [
+        # CLI
+        wget
+        curl
+        traceroute
+        dnsutils
+        jq
+        tmux
+        cachix
+        dua
+        gnupg
+        pass
 
-      # for `nix`
-      nixd
+        # for `nix`
+        nixd
 
-      # for `alles`
-      ydotool
-      wl-clipboard
+        # for `alles`
+        ydotool
+        wl-clipboard
 
-      # Emacs
-      ((emacsPackagesFor emacs30).emacsWithPackages (epkgs: [ epkgs.mu4e ]))
-      ripgrep
-      fd
-      python314
-      aider-chat
-      emacs-lsp-booster
+        # Emacs
+        ((emacsPackagesFor emacs30).emacsWithPackages (epkgs: [ epkgs.mu4e ]))
+        ripgrep
+        fd
+        python314
+        aider-chat
+        emacs-lsp-booster
 
-      # Install globally to make gleam-ts-mode happy
-      gleam
+        # Install globally to make gleam-ts-mode happy
+        gleam
 
-      # Neovim
-      neovim
-      zig
-      gcc
-      lua
-      unzip
-      gnumake
-      markdownlint-cli
+        # Neovim
+        neovim
+        zig
+        gcc
+        lua
+        unzip
+        gnumake
+        markdownlint-cli
 
-      # mob programming
-      mob
+        # mob programming
+        mob
 
-      # other GUI Tools
-      zed-editor
-      tor-browser
-      chromium
-      librewolf
-      obsidian
-      discord
-      signal-desktop
-      telegram-desktop
-      zoom-us
-      thunderbird
-      gnome-tweaks
-      teams-for-linux
+        # other GUI Tools
+        zed-editor
+        tor-browser
+        chromium
+        librewolf
+        obsidian
+        discord
+        signal-desktop
+        telegram-desktop
+        zoom-us
+        thunderbird
+        gnome-tweaks
+        teams-for-linux
 
-      # Useful for login networks: https://discourse.nixos.org/t/does-wifionice-wifi-on-deutsche-bahn-german-railway-work-for-you/41646
-      captive-browser
+        # Useful for login networks: https://discourse.nixos.org/t/does-wifionice-wifi-on-deutsche-bahn-german-railway-work-for-you/41646
+        captive-browser
 
-      # AI
-      (pkgs.buildNpmPackage {
-        pname = "claude-code-acp";
-        version = "0.4.5";
-        src = pkgs.fetchFromGitHub {
-          owner = "zed-industries";
-          repo = "claude-code-acp";
-          rev = "v0.4.5";
-          hash = "sha256-kkAQuYP2S5EwIGJV8TLrlYzHOC54vmxEHwwuZD5P1hI=
+        # AI
+        (pkgs.buildNpmPackage {
+          pname = "claude-code-acp";
+          version = "0.4.5";
+          src = pkgs.fetchFromGitHub {
+            owner = "zed-industries";
+            repo = "claude-code-acp";
+            rev = "v0.4.5";
+            hash = "sha256-kkAQuYP2S5EwIGJV8TLrlYzHOC54vmxEHwwuZD5P1hI=
 ";
-        };
-        npmDepsHash = "sha256-IR88NP1AiR6t/MLDdaZY1Np0AE7wfqEUfmnohaf0ymc=";
-        meta = with pkgs.lib; {
-          description = "An ACP-compatible coding agent powered by the Claude Code SDK (TypeScript)";
-          homepage = "https://github.com/zed-industries/claude-code-acp";
-          license = licenses.asl20;
-          maintainers = [ ];
-        };
-      })
+          };
+          npmDepsHash = "sha256-IR88NP1AiR6t/MLDdaZY1Np0AE7wfqEUfmnohaf0ymc=";
+          meta = with pkgs.lib; {
+            description = "An ACP-compatible coding agent powered by the Claude Code SDK (TypeScript)";
+            homepage = "https://github.com/zed-industries/claude-code-acp";
+            license = licenses.asl20;
+            maintainers = [ ];
+          };
+        })
 
-      # # It is sometimes useful to fine-tune packages, for example, by applying
-      # # overrides. You can do that directly here, just don't forget the
-      # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-      # # fonts?
-      # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+        # # It is sometimes useful to fine-tune packages, for example, by applying
+        # # overrides. You can do that directly here, just don't forget the
+        # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
+        # # fonts?
+        # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
-      # # You can also create simple shell scripts directly inside your
-      # # configuration. For example, this adds a command 'my-hello' to your
-      # # environment:
-      # (pkgs.writeShellScriptBin "my-hello" ''
-      #   echo "Hello, ${config.home.username}!"
-      # '')
-    ] ++ [ inputs.nixpkgs-24-11.legacyPackages."x86_64-linux".linphone ];
+        # # You can also create simple shell scripts directly inside your
+        # # configuration. For example, this adds a command 'my-hello' to your
+        # # environment:
+        # (pkgs.writeShellScriptBin "my-hello" ''
+        #   echo "Hello, ${config.home.username}!"
+        # '')
+      ]
+      ++ [ inputs.nixpkgs-24-11.legacyPackages."x86_64-linux".linphone ];
 
     home.file = {
       ".local/share/gnome-shell/extensions/gnome-magic-window@adrienverge/extension.js".source =
