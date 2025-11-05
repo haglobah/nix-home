@@ -8,6 +8,7 @@
   imports = [
     ./modules/registry.nix
     ./modules/email.nix
+    ./modules/autostart.nix
 
     ./programs/git.nix
     # ./programs/vscode.nix
@@ -146,11 +147,6 @@
       ".config/zed/keymap.json".source = dotfiles/zed/keymap.json;
 
       ".mob".source = dotfiles/mob.sh/.mob;
-      # # You can also set the file content immediately.
-      # ".gradle/gradle.properties".text = ''
-      #   org.gradle.console=verbose
-      #   org.gradle.daemon.idletimeout=3600000
-      # '';
     };
 
     # You can also manage environment variables but you will have to manually
@@ -170,10 +166,6 @@
     };
 
     xdg.enable = true;
-    xdg.autostart = {
-      enable = true;
-      entries = [ "${inputs.nixpkgs-24-11.legacyPackages."x86_64-linux".linphone}/share/applications/linphone.desktop" ];
-    };
 
     dconf.settings = {
       "org/gnome/desktop/interface" = {
