@@ -69,10 +69,8 @@
         emacs-lsp-booster
 
         # for aider
-        aider-chat
+        aider-chat-with-playwright
         python314
-        # for link follwing in chat
-        playwright-test
 
         # Install globally to make gleam-ts-mode happy
         gleam
