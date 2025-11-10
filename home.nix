@@ -66,9 +66,13 @@
         ((emacsPackagesFor emacs30).emacsWithPackages (epkgs: [ epkgs.mu4e ]))
         ripgrep
         fd
-        python314
-        aider-chat
         emacs-lsp-booster
+
+        # for aider
+        aider-chat
+        python314
+        # for link follwing in chat
+        playwright-test
 
         # Install globally to make gleam-ts-mode happy
         gleam
