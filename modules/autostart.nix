@@ -25,5 +25,6 @@
     ".config/autostart/chromium.desktop".source =
       "${pkgs.chromium}/share/applications/chromium-browser.desktop";
     ".config/autostart/emacs.desktop".source = "${pkgs.emacs}/share/applications/emacs.desktop";
+    ".config/autostart/obsidian.desktop".source = "${pkgs.obsidian}/share/applications/obsidian.desktop";
   };
 }
