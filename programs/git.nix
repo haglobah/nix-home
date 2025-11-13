@@ -46,7 +46,7 @@
           "git@github.com:" = {insteadOf = "gs:";};
           "git@github.com:haglobah/" = {insteadOf = "bah:";};
           "https://gitlab.com/" = {insteadOf = "gl:";};
-          "ssh://git@gitlab.active-group.de:ag/" = {insteadOf = "ag:";};
+          "git@gitlab.active-group.de:ag/" = {insteadOf = "ag:";};
           "git@github.com:active-group/" = {insteadOf = "agh:";};
         };
       };
