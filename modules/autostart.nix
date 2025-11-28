@@ -20,6 +20,7 @@
       inputs.nixpkgs-24-11.legacyPackages."x86_64-linux".linphone
     }/share/applications/linphone.desktop";
     ".config/autostart/firefox.desktop".source = "${pkgs.firefox}/share/applications/firefox.desktop";
+    ".config/autostart/thunderbird.desktop".source = "${pkgs.thunderbird}/share/applications/thunderbird.desktop";
     ".config/autostart/librewolf.desktop".source =
       "${pkgs.librewolf}/share/applications/librewolf.desktop";
     ".config/autostart/chromium.desktop".source =
