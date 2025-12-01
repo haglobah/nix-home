@@ -9,6 +9,7 @@
     ./modules/registry.nix
     ./modules/email.nix
     ./modules/autostart.nix
+    ./secrets.nix
 
     ./programs/git.nix
     # ./programs/vscode.nix
@@ -18,6 +19,13 @@
   ];
 
   config = {
+    # nix.settings.extra-deprecated-features = [ "url-literals" ];
+    active-group.timetracking = {
+      enable = true;
+      timetracking-token = config.age.secrets.timetracking-secret.path;
+      arbeitszeiten-token = config.age.secrets.arbeitszeiten-secret.path;
+      abrechenbare-zeiten-token = config.age.secrets.abrechenbare-zeiten-secret.path;
+    };
     nixpkgs.config = {
       allowUnfree = true;
       allowUnfreePredicate = _: true;
