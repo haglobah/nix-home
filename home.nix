@@ -1,7 +1,7 @@
 {
+  inputs,
   config,
   pkgs,
-  inputs,
   ...
 }:
 {
@@ -55,10 +55,14 @@
         gnupg
         pass
 
+        # for secrets
+        agenix
+
         # for `nix`
         nixd
 
         # for `alles`
+        alles
         ydotool
         wl-clipboard
 
@@ -137,7 +141,9 @@
         #   echo "Hello, ${config.home.username}!"
         # '')
       ]
-      ++ [ inputs.nixpkgs-24-11.legacyPackages."x86_64-linux".linphone ];
+      ++ [
+        inputs.nixpkgs-24-11.legacyPackages."x86_64-linux".linphone
+      ];
 
     home.file = {
       ".local/share/gnome-shell/extensions/gnome-magic-window@adrienverge/extension.js".source =

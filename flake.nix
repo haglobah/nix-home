@@ -31,13 +31,28 @@
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-starter-kit = {
+      url = "github:active-group/nix-starter-kit";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
 
   outputs =
     { nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [
+          (final: prev: {
+            alles = inputs.alles.packages.${system}.default;
+          })
+          inputs.agenix.overlays.default
+        ];
+      };
+
     in
     {
       devShells.${system}.default = pkgs.mkShell { packages = [ pkgs.nixfmt-rfc-style ]; };
@@ -51,12 +66,6 @@
           ./home.nix
           inputs.nix-index-database.homeModules.nix-index
           inputs.catppuccin.homeModules.catppuccin
-          {
-            home.packages = [
-              inputs.alles.packages.${system}.default
-              inputs.agenix.packages.${system}.default
-            ];
-          }
         ];
 
         # Optionally use extraSpecialArgs
