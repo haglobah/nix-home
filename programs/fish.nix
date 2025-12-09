@@ -64,11 +64,11 @@
         "wha" = "type --all";
 
         "ae" = {
-          expansion = "cd ~/mynix/secrets/ && agenix --edit % && cd -";
+          expansion = "cd ~/nix-home/secrets/ && agenix --edit % && cd -";
           setCursor = true;
         };
         "ad" = {
-          expansion = "cd ~/mynix/secrets/ && agenix --decrypt % && cd -";
+          expansion = "cd ~/nix-home/secrets/ && agenix --decrypt % && cd -";
           setCursor = true;
         };
 
