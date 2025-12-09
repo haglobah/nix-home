@@ -8,6 +8,7 @@ in
 {
   "openai-api-key.age".publicKeys = my-machines;
   "anthropic-api-key.age".publicKeys = my-machines;
+  "google-api-key.age".publicKeys = my-machines;
   "bluesky-app-secret.age".publicKeys = my-machines;
   "timetracking-secret.age".publicKeys = my-machines;
   "arbeitszeiten-secret.age".publicKeys = my-machines;
